@@ -1,0 +1,997 @@
+<?xml version="1.0"?>
+<odoo>
+    <data noupdate="0">
+
+        <record id="7_que_ask_before_installation" model="mailing.mailing">
+            <field name="name">7 questions to ask before installing an Outdoor Roof</field>
+            <field name="subject">7 questions to ask before installing an Outdoor Roof</field>
+            <field name="use_in_marketing_automation">True</field>
+            <field name="user_id" ref="base.user_admin"/>
+            <field name="mailing_model_id" ref="crm.model_crm_lead"/>
+            <field name="mailing_domain">[]</field>
+            <field name="reply_to_mode">email</field>
+            <field name="reply_to">${object.company_id.email}</field>
+            <field name="body_html" type="html">
+                <table border="0" cellpadding="0" cellspacing="0" style="border-collapse:collapse;">
+                    <tbody>
+                        <tr><td>
+                            <div>
+                                <img src="/ors_crm/static/image/ors1.jpg" style="margin:auto;width:100%;height:100%;display:inline-block" alt="" />
+                                <br/>
+                            </div>
+                            <div style="font-size:16px; color: black; font-family: Verdana, Arial, Tahoma, Serif; color: black;">
+                                <p style="margin:0px;font-size:16px; color: black; font-family: Verdana, Arial, Tahoma, Serif;">
+                                    Hey,<br/><br/>
+                                </p>
+                            </div>
+                        <!-- </tr> -->
+                        <!-- <tr> -->
+                             <div style="font-size:16px; color: black; font-family: Verdana, Arial, Tahoma, Serif;">
+                                 <br/>
+                                 <p style="margin:0px;font-size:16px; color: black; font-family: Verdana, Arial, Tahoma, Serif;">
+                                     Starting any home renovation project can feel overwhelming. We understand. We’ve been doing this for more than 30 years, and during that time, we’ve seen it all.<br/>
+                                 </p>
+                             </div>
+                             <div style="font-size:16px; color: black; font-family: Verdana, Arial, Tahoma, Serif;">
+                                 <br/>
+                                 <p style="margin:0px;font-size:16px; color: black; font-family: Verdana, Arial, Tahoma, Serif;">
+                                     Based on our experience, we’ve put together 7 crucial questions homeowners need to answer to make the process easier.<br/>
+                                 </p>
+                             </div>
+                             <div style="font-size:16px; color: black; font-family: Verdana, Arial, Tahoma, Serif;">
+                                 <br/>
+                                 <p style="margin:0px; padding-left:10px; font-size:16px; color: black; font-family: Verdana, Arial, Tahoma, Serif;">
+                                     1. Can you proceed with an exempt development, or do you need to obtain council approval to install your new roof? (check this out)<br/><br/>
+                                     2. What is the primary use of your Eclipse Opening Roof? - additional entertaining space, a place to relax in the shade in summer and the sun in winter or just to protect your floor coverings and windows from the effect of the sun’s harmful rays<br/><br/>
+                                     3. What will be the size and colour of your ideal Pergola? You will want something that fits your proposed use and is just right for you<br/><br/>
+                                     4. Do you have an assurance that your new roof will comply with Australian Standards? A lot of imported kits are not designed for Australian conditions and don’t comply with our Standards. Consider cladding on high rise buildings<br/><br/>
+                                     5. Do you want lights and blinds in the area where your new opening roof will be? Will they make your space more usable?<br/><br/>
+                                     6. When do you want your new roof completed? Are you hoping to have it finished by the summer? In time for Christmas? For a special family gathering?<br/><br/>
+                                     7. Will your service and spare parts be taken care of in the future? Again we have been asked to look at overseas purchased products and unfortunately have had to inform the owners that parts for one roof in all probability won’t fit another. ORS can still service the first roof we built some 26 years ago<br/>
+                                 </p>
+                             </div>
+                             <div style="font-size:16px; color: black; font-family: Verdana, Arial, Tahoma, Serif;">
+                                 <br/>
+                                 <p style="margin:0px;font-size:16px; color: black; font-family: Verdana, Arial, Tahoma, Serif;">
+                                     If you know the answers, great! If not, don’t worry. Contact us today, and we’ll walk you through each question.<br/>
+                                 </p>
+                            </div>
+                             <div>
+                                 <center>
+                                     <br/>
+                                     <button onclick="https://openingroofspecialists.com.au/customer-jobsite-photos/?vgo_ee=ZYRfiU1p1wdmQ%2FCuJ9NlnFb9clrLpg0Fb7OQ5vhiPds%3D" style="background-color: #4CAF50; border: none; color: white; padding: 10px 22px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; border-radius: 8px;" type="button">Free Personalised Quote</button>
+                                 </center>
+                             </div>
+                             <div style="font-size:16px; color: black; font-family: Verdana, Arial, Tahoma, Serif;">
+                                 <br/>
+                                 <p style="margin:0px;font-size:16px; color: black; font-family: Verdana, Arial, Tahoma, Serif;">
+                                     We’re here to make every step of the building process more manageable. If you need help with design or someone to walk you through the council approval process, we’re here.<br/>
+                                 </p>
+                             </div>
+                             <div style="font-size:16px; color: black; font-family: Verdana, Arial, Tahoma, Serif;">
+                                 <br/>
+                                 <p style="margin:0px;font-size:16px; color: black; font-family: Verdana, Arial, Tahoma, Serif;">
+                                     Thank you,<br/>
+                                     <strong>The Team at Opening Roof Specialists</strong><br/>
+                                 </p>
+                             </div>
+                             <div style="font-size:16px; color: black; font-family: Verdana, Arial, Tahoma, Serif;">
+                                 <br/>
+                                 <p style="margin:0px;font-size:16px; color: black; font-family: Verdana, Arial, Tahoma, Serif;">
+                                     P.S. Wondering what it’s like to work with us? Read reviews from past clients:<br/>
+                                     <a href="https://openingroofspecialists.com.au/category/testimonials/">https://openingroofspecialists.com.au/category/testimonials</a>
+                                 </p>
+                             </div>
+                        <!-- </tr> -->
+                        <!-- <tr> -->
+                            <div>
+                               <img src="/ors_crm/static/image/ors2.jpg" style="margin:auto;width:100%;height:100%;display:block" alt="" />
+                               <br/>
+                           </div>
+                        </td></tr>
+                        <tr style="font-size:16px; color: black; font-family: Verdana, Arial, Tahoma, Serif; color: black;">
+                            <td>
+                            <center>
+                                Send to: <a href="${'mailto:%s' % object.company_id.email}">
+                                     ${object.company_id.email}
+                                 </a><br/>
+                             </center>
+                         <!-- </tr> -->
+                         <!-- <tr style="font-size:16px; color: black; font-family: Verdana, Arial, Tahoma, Serif; color: black;"><td> -->
+                             <center>
+                                 <a href="https://openingroofspecialists.activehosted.com/unsubscribe/1">Unsubscribe</a><br/>
+                             </center>
+                        <!-- </tr> -->
+                        <!-- <tr style="font-size:16px; color: black; font-family: Verdana, Arial, Tahoma, Serif; color: black;"> -->
+                            <br/>
+                            <center>
+                                % if object.company_id.street:
+                                    ${object.company_id.street},
+                                % endif
+                                % if object.company_id.stree2:
+                                    ${object.company_id.street2},
+                                % endif
+                                <!-- <br/> -->
+                                ${object.company_id.city},${object.company_id.state_id.name}, ${object.company_id.zip},
+                                <!-- <br/> -->
+                                ${object.company_id.country_id.name}
+                            </center>
+                        </td></tr>
+                    </tbody>
+                </table>
+            </field>
+        </record>
+
+        <record id="one_roof_family_together" model="mailing.mailing">
+            <field name="name">How one roof brought a family closer together</field>
+            <field name="subject">How one roof brought a family closer together</field>
+            <field name="use_in_marketing_automation">True</field>
+            <field name="user_id" ref="base.user_admin"/>
+            <field name="mailing_model_id" ref="crm.model_crm_lead"/>
+            <field name="mailing_domain">[]</field>
+            <field name="reply_to_mode">email</field>
+            <field name="reply_to">${object.company_id.email}</field>
+            <field name="body_html" type="html">
+                <table border="0" cellpadding="0" cellspacing="0" style="border-collapse:collapse;">
+                    <tbody>
+                        <tr><td>
+                            <div>
+                                <img src="/ors_crm/static/image/ors1.jpg" style="margin:auto;width:100%;height:100%;display:inline-block" alt="" />
+                                <br/>
+                            </div>
+                            <div style="font-size:16px; color: black; font-family: Verdana, Arial, Tahoma, Serif; color: black;">
+                                <p style="margin:0px;font-size:16px; color: black; font-family: Verdana, Arial, Tahoma, Serif;">
+                                    Hey,<br/><br/>
+                                </p>
+                            </div>
+                        <!-- </td> -->
+                        <!-- </tr> -->
+                        <!-- <tr> -->
+                            <!-- <td> -->
+                            <div style="font-size:16px; color: black; font-family: Verdana, Arial, Tahoma, Serif;">
+                                    <!-- <br/> -->
+                                    <p style="margin:0px;font-size:16px; color: black; font-family: Verdana, Arial, Tahoma, Serif;">
+                                        The main reason people choose our opening roofs is that they want to <strong>increase their outdoor space’s livability. </strong><br/>
+                                    </p>
+                            </div>
+                            <div style="font-size:16px; color: black; font-family: Verdana, Arial, Tahoma, Serif;">
+                                <br/>
+                                <p style="margin:0px;font-size:16px; color: black; font-family: Verdana, Arial, Tahoma, Serif;">
+                                    Take one of our recent projects.<br/>
+                                </p>
+                            </div>
+                            <div style="font-size:16px; color: black; font-family: Verdana, Arial, Tahoma, Serif;">
+                                <br/>
+                                <p style="margin:0px; font-size:16px; color: black; font-family: Verdana, Arial, Tahoma, Serif;">
+                                    In rural Mittagong, a family wanted to take full advantage of the breathtaking mountain views they see from their patio.<br/>
+                                </p>
+                            </div>
+                            <div style="font-size:16px; color: black; font-family: Verdana, Arial, Tahoma, Serif;">
+                                <br/>
+                                <p style="margin:0px;font-size:16px; color: black; font-family: Verdana, Arial, Tahoma, Serif;">
+                                    Unfortunately, the scorching sun we all know and love forced them to stay inside far too often.<br/>
+                                </p>
+                           </div>
+                           <div style="font-size:16px; color: black; font-family: Verdana, Arial, Tahoma, Serif;">
+                                <br/>
+                                <p style="margin:0px;font-size:16px; color: black; font-family: Verdana, Arial, Tahoma, Serif;">
+                                    They approached us to see if we could create a roof for their patio that would give them more outside time with friends and family. They also wanted a custom design that respected the existing timber frame and concrete columns of their home. <br/>
+                                </p>
+                           </div>
+                           <div style="font-size:16px; color: black; font-family: Verdana, Arial, Tahoma, Serif;">
+                                <br/>
+                                <p style="margin:0px;font-size:16px; color: black; font-family: Verdana, Arial, Tahoma, Serif;">
+                                    This is the result:<br/>
+                                </p>
+                           </div>
+                       <!-- </td> -->
+                        <!-- </tr> -->
+                        <!-- <tr> -->
+                            <!-- <td> -->
+                            <div>
+                                <img src="/ors_crm/static/image/ors3.png" style="margin:auto;width:100%;height:100%;display:block" alt="" />
+                                <br/>
+                           </div>
+                       <!-- </td> -->
+                        <!-- </tr> -->
+                        <!-- <tr> -->
+                            <!-- <td> -->
+                            <div style="font-size:16px; color: black; font-family: Verdana, Arial, Tahoma, Serif;">
+                                 <br/>
+                                 <p style="margin:0px;font-size:16px; color: black; font-family: Verdana, Arial, Tahoma, Serif;">
+                                     Stunning, right? (Yes, we mean the mountains. But . . . if you don’t mind us saying so, that opening roof isn’t too bad either.) <br/>
+                                 </p>
+                            </div>
+                            <div style="font-size:16px; color: black; font-family: Verdana, Arial, Tahoma, Serif;">
+                                 <br/>
+                                 <p style="margin:0px;font-size:16px; color: black; font-family: Verdana, Arial, Tahoma, Serif;">
+                                     Now, this family can spend quality time together outside, at any time of the day.  <br/>
+                                 </p>
+                            </div>
+                            <div style="font-size:16px; color: black; font-family: Verdana, Arial, Tahoma, Serif;">
+                                 <br/>
+                                 <p style="margin:0px;font-size:16px; color: black; font-family: Verdana, Arial, Tahoma, Serif;">
+                                     If you want to improve your family’s outdoor time together, contact us today. <br/>
+                                 </p>
+                            </div>
+                             <div>
+                                 <center>
+                                     <br/>
+                                     <button onclick="https://openingroofspecialists.com.au/contact/?vgo_ee=ZYRfiU1p1wdmQ%2FCuJ9NlnFb9clrLpg0Fb7OQ5vhiPds%3D" style="background-color: #4CAF50; border: none; color: white; padding: 10px 22px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; border-radius: 8px;" type="button">Contact Us Today</button>
+                                 </center>
+                             </div>
+                             <div style="font-size:16px; color: black; font-family: Verdana, Arial, Tahoma, Serif;">
+                                 <br/>
+                                 <p style="margin:0px;font-size:16px; color: black; font-family: Verdana, Arial, Tahoma, Serif;">
+                                     You deserve a roof that brings you closer to the people you love, and we want to be the ones who build it for you.<br/>
+                                 </p>
+                             </div>
+                             <div style="font-size:16px; color: black; font-family: Verdana, Arial, Tahoma, Serif;">
+                                 <br/>
+                                 <p style="margin:0px;font-size:16px; color: black; font-family: Verdana, Arial, Tahoma, Serif;">
+                                     Thank you,<br/>
+                                     <strong>The Team at Opening Roof Specialists</strong><br/>
+                                 </p>
+                             </div>
+                             <div style="font-size:16px; color: black; font-family: Verdana, Arial, Tahoma, Serif;">
+                                 <br/>
+                                 <p style="margin:0px;font-size:16px; color: black; font-family: Verdana, Arial, Tahoma, Serif;">
+                                     P.S. Wondering what it’s like to work with us? Read reviews from past clients:<br/>
+                                     <a href="https://openingroofspecialists.com.au/category/testimonials/">https://openingroofspecialists.com.au/category/testimonials</a>
+                                 </p>
+                             </div>
+                         <!-- </td> -->
+                        <!-- </tr> -->
+                        <!-- <tr> -->
+                            <!-- <td> -->
+                            <div>
+                               <img src="/ors_crm/static/image/ors2.jpg" style="margin:auto;width:100%;height:100%;display:block" alt="" />
+                               <br/>
+                           </div>
+                       </td>
+                        </tr>
+                        <tr style="font-size:16px; color: black; font-family: Verdana, Arial, Tahoma, Serif; color: black;">
+                            <td>
+                            <center>
+                                Send to: <a href="${'mailto:%s' % object.company_id.email}">
+                                     ${object.company_id.email}
+                                 </a><br/>
+                             </center>
+                         <!-- </td> -->
+                         <!-- </tr> -->
+                         <!-- <tr style="font-size:16px; color: black; font-family: Verdana, Arial, Tahoma, Serif; color: black;"> -->
+                            <!-- <td> -->
+                             <center>
+                                 <a href="https://openingroofspecialists.activehosted.com/unsubscribe/1">Unsubscribe</a><br/>
+                             </center>
+                         <!-- </td> -->
+                        <!-- </tr> -->
+                        <!-- <tr style="font-size:16px; color: black; font-family: Verdana, Arial, Tahoma, Serif; color: black;"> -->
+                            <!-- <td> -->
+                            <br/>
+                            <center>
+                                % if object.company_id.street:
+                                    ${object.company_id.street},
+                                % endif
+                                % if object.company_id.stree2:
+                                    ${object.company_id.street2},
+                                % endif
+                                <!-- <br/> -->
+                                ${object.company_id.city},${object.company_id.state_id.name}, ${object.company_id.zip},
+                                <!-- <br/> -->
+                                ${object.company_id.country_id.name}
+                            </center>
+                        </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </field>
+        </record>
+
+        <record id="control_weather" model="mailing.mailing">
+            <field name="name">Psst! What if . . . you could control the weather</field>
+            <field name="subject">Psst! What if . . . you could control the weather</field>
+            <field name="use_in_marketing_automation">True</field>
+            <field name="user_id" ref="base.user_admin"/>
+            <field name="mailing_model_id" ref="crm.model_crm_lead"/>
+            <field name="mailing_domain">[]</field>
+            <field name="reply_to_mode">email</field>
+            <field name="reply_to">${object.company_id.email}</field>
+            <field name="body_html" type="html">
+                <table border="0" cellpadding="0" cellspacing="0" style="border-collapse:collapse;">
+                    <tbody>
+                        <tr><td>
+                            <div>
+                                <img src="/ors_crm/static/image/ors1.jpg" style="margin:auto;width:100%;height:100%;display:inline-block" alt="" />
+                                <br/>
+                            </div>
+                            <div style="font-size:16px; color: black; font-family: Verdana, Arial, Tahoma, Serif; color: black;">
+                                <p style="margin:0px;font-size:16px; color: black; font-family: Verdana, Arial, Tahoma, Serif;">
+                                    Hey,<br/><br/>
+                                </p>
+                            </div>
+                        <!-- </tr> -->
+                        <!-- <tr> -->
+                            <div style="font-size:16px; color: black; font-family: Verdana, Arial, Tahoma, Serif;">
+                                    <p style="margin:0px;font-size:16px; color: black; font-family: Verdana, Arial, Tahoma, Serif;">
+                                        If we could give you the power to control the weather, we would.<br/>
+                                    </p>
+                                </div>
+                                <div style="font-size:16px; color: black; font-family: Verdana, Arial, Tahoma, Serif;">
+                                    <br/>
+                                    <p style="margin:0px;font-size:16px; color: black; font-family: Verdana, Arial, Tahoma, Serif;">
+                                        Unfortunately, we can’t give you the power to call or calm storms. But we can offer the next best thing: a roof you can control.<br/>
+                                    </p>
+                                </div>
+                                <div style="font-size:16px; color: black; font-family: Verdana, Arial, Tahoma, Serif;">
+                                    <br/>
+                                    <p style="margin:0px; font-size:16px; color: black; font-family: Verdana, Arial, Tahoma, Serif;">
+                                        Our opening roofs have louvres that rotate 170 degrees. That means you can close or open your roof throughout the day for sunshine, shade or ventilation to meet your needs.<br/>
+                                    </p>
+                                </div>
+                                <div style="font-size:16px; color: black; font-family: Verdana, Arial, Tahoma, Serif;">
+                                    <br/>
+                                    <p style="margin:0px;font-size:16px; color: black; font-family: Verdana, Arial, Tahoma, Serif;">
+                                        So if you want to let more sunshine in or increase your shade coverage, you have the power.<br/>
+                                    </p>
+                               </div>
+                               <div style="font-size:16px; color: black; font-family: Verdana, Arial, Tahoma, Serif;">
+                                    <br/>
+                                    <p style="margin:0px;font-size:16px; color: black; font-family: Verdana, Arial, Tahoma, Serif;">
+                                        The best part is that by controlling the angle of the louvres, you can also control the temperature. <br/>
+                                    </p>
+                               </div>
+                               <div style="font-size:16px; color: black; font-family: Verdana, Arial, Tahoma, Serif;">
+                                    <br/>
+                                    <p style="margin:0px;font-size:16px; color: black; font-family: Verdana, Arial, Tahoma, Serif;">
+                                        Yes, you read that right.<br/>
+                                    </p>
+                               </div>
+                               <div style="font-size:16px; color: black; font-family: Verdana, Arial, Tahoma, Serif;">
+                                    <br/>
+                                    <p style="margin:0px;font-size:16px; color: black; font-family: Verdana, Arial, Tahoma, Serif;">
+                                        Our roofs make you the master and commander over the temperature in your OUTDOOR space (which also filters through to your indoor space).<br/>
+                                    </p>
+                               </div>
+                               <div style="font-size:16px; color: black; font-family: Verdana, Arial, Tahoma, Serif;">
+                                    <br/>
+                                    <p style="margin:0px;font-size:16px; color: black; font-family: Verdana, Arial, Tahoma, Serif;">
+                                        Pretty cool, right?<br/>
+                                    </p>
+                               </div>
+                               <div style="font-size:16px; color: black; font-family: Verdana, Arial, Tahoma, Serif;">
+                                    <br/>
+                                    <p style="margin:0px;font-size:16px; color: black; font-family: Verdana, Arial, Tahoma, Serif;">
+                                        Get your personilised quote below:<br/>
+                                    </p>
+                               </div>
+                                <div>
+                                    <center>
+                                        <br/>
+                                        <button onclick="https://openingroofspecialists.com.au/customer-jobsite-photos/?vgo_ee=ZYRfiU1p1wdmQ%2FCuJ9NlnFb9clrLpg0Fb7OQ5vhiPds%3D" style="background-color: #4CAF50; border: none; color: white; padding: 10px 22px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; border-radius: 8px;" type="button">Send Me a Quote</button>
+                                    </center>
+                                </div>
+                                <div style="font-size:16px; color: black; font-family: Verdana, Arial, Tahoma, Serif;">
+                                    <br/>
+                                    <p style="margin:0px;font-size:16px; color: black; font-family: Verdana, Arial, Tahoma, Serif;">
+                                        Build an opening roof. Control the weather (mostly). Our gift to you.<br/>
+                                    </p>
+                                </div>
+                                <div style="font-size:16px; color: black; font-family: Verdana, Arial, Tahoma, Serif;">
+                                    <br/>
+                                    <p style="margin:0px;font-size:16px; color: black; font-family: Verdana, Arial, Tahoma, Serif;">
+                                        Thank you,<br/>
+                                        <strong>The Team at Opening Roof Specialists</strong><br/>
+                                    </p>
+                                </div>
+                                <div style="font-size:16px; color: black; font-family: Verdana, Arial, Tahoma, Serif;">
+                                    <br/>
+                                    <p style="margin:0px;font-size:16px; color: black; font-family: Verdana, Arial, Tahoma, Serif;">
+                                        P.S. Wondering what it’s like to work with us? Read reviews from past clients:<br/>
+                                        <a href="https://openingroofspecialists.com.au/category/testimonials/">https://openingroofspecialists.com.au/category/testimonials</a>
+                                    </p>
+                                </div>
+                        <!-- </tr> -->
+                        <!-- <tr> -->
+                            <div>
+                               <img src="/ors_crm/static/image/ors2.jpg" style="margin:auto;width:100%;height:100%;display:block" alt="" />
+                               <br/>
+                           </div>
+                       </td>
+                        </tr>
+                        <tr style="font-size:16px; color: black; font-family: Verdana, Arial, Tahoma, Serif; color: black;"><td>
+                            <center>
+                                Send to: <a href="${'mailto:%s' % object.company_id.email}">
+                                     ${object.company_id.email}
+                                 </a><br/>
+                             </center>
+                         <!-- </tr> -->
+                         <!-- <tr style="font-size:16px; color: black; font-family: Verdana, Arial, Tahoma, Serif; color: black;"> -->
+                             <center>
+                                 <a href="https://openingroofspecialists.activehosted.com/unsubscribe/1">Unsubscribe</a><br/>
+                             </center>
+                        <!-- </tr> -->
+                        <!-- <tr style="font-size:16px; color: black; font-family: Verdana, Arial, Tahoma, Serif; color: black;"> -->
+                            <br/>
+                            <center>
+                                % if object.company_id.street:
+                                    ${object.company_id.street},
+                                % endif
+                                % if object.company_id.stree2:
+                                    ${object.company_id.street2},
+                                % endif
+                                <!-- <br/> -->
+                                ${object.company_id.city},${object.company_id.state_id.name}, ${object.company_id.zip},
+                                <!-- <br/> -->
+                                ${object.company_id.country_id.name}
+                            </center>
+                        </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </field>
+        </record>
+
+        <record id="roof_pics_happen" model="mailing.mailing">
+            <field name="name">(Roof) pics or it didn’t happen!</field>
+            <field name="subject">(Roof) pics or it didn’t happen!</field>
+            <field name="use_in_marketing_automation">True</field>
+            <field name="user_id" ref="base.user_admin"/>
+            <field name="mailing_model_id" ref="crm.model_crm_lead"/>
+            <field name="mailing_domain">[]</field>
+            <field name="reply_to_mode">email</field>
+            <field name="reply_to">${object.company_id.email}</field>
+            <field name="body_html" type="html">
+                <table border="0" cellpadding="0" cellspacing="0" style="border-collapse:collapse;">
+                    <tbody>
+                        <tr><td>
+                            <div>
+                                <img src="/ors_crm/static/image/ors1.jpg" style="margin:auto;width:100%;height:100%;display:inline-block" alt="" />
+                                <br/>
+                            </div>
+                            <div style="font-size:16px; color: black; font-family: Verdana, Arial, Tahoma, Serif; color: black;">
+                                <p style="margin:0px;font-size:16px; color: black; font-family: Verdana, Arial, Tahoma, Serif;">
+                                    Hey,<br/><br/>
+                                </p>
+                            </div>
+                        <!-- </tr> -->
+                        <!-- <tr> -->
+                            <div style="font-size:16px; color: black; font-family: Verdana, Arial, Tahoma, Serif;">
+                                    <p style="margin:0px;font-size:16px; color: black; font-family: Verdana, Arial, Tahoma, Serif;">
+                                        You’ve probably guessed that we could talk about opening roofs all day.<br/>
+                                    </p>
+                                </div>
+                                <div style="font-size:16px; color: black; font-family: Verdana, Arial, Tahoma, Serif;">
+                                    <br/>
+                                    <p style="margin:0px;font-size:16px; color: black; font-family: Verdana, Arial, Tahoma, Serif;">
+                                        But today, we’re going to let our roofs do all the talking.<br/>
+                                    </p>
+                                </div>
+                                <div style="font-size:16px; color: black; font-family: Verdana, Arial, Tahoma, Serif;">
+                                    <br/>
+                                    <center>
+                                        <p style="margin:0px; font-size:16px; color: black; font-family: Verdana, Arial, Tahoma, Serif;">
+                                        Click below to see our recent projects. 👇<br/>
+                                        </p>
+                                    </center>
+                                </div>
+                        <!-- </tr> -->
+                        <!-- <tr> -->
+                            <img src="/ors_crm/static/image/ors4.jpg" style="margin:auto;width:30%;height:30%;display:block" alt="" />
+                            <br/>
+
+                            <img src="/ors_crm/static/image/ors5.jpg" style="margin:auto;width:30%;height:30%;display:block" alt="" />
+                            <br/>
+                        <!-- </tr> -->
+                        <!-- <tr> -->
+                            <div>
+                                    <center>
+                                        <br/>
+                                        <button onclick="https://openingroofspecialists.com.au/projects/?vgo_ee=ZYRfiU1p1wdmQ%2FCuJ9NlnFb9clrLpg0Fb7OQ5vhiPds%3D" style="background-color: #4CAF50; border: none; color: white; padding: 10px 22px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; border-radius: 8px;" type="button">More Projects</button>
+                                    </center>
+                                </div>
+
+                                <div style="font-size:16px; color: black; font-family: Verdana, Arial, Tahoma, Serif;">
+                                    <br/>
+                                    <p style="margin:0px;font-size:16px; color: black; font-family: Verdana, Arial, Tahoma, Serif;">
+                                        Every home is unique and every customer is different. That’s why we design each Eclipse Roof Opening system we install to meet the space and style requirements of our clientele.<br/>
+                                    </p>
+                               </div>
+                               <div style="font-size:16px; color: black; font-family: Verdana, Arial, Tahoma, Serif;">
+                                    <br/>
+                                    <p style="margin:0px;font-size:16px; color: black; font-family: Verdana, Arial, Tahoma, Serif;">
+                                        Let us know what you like, don’t like, and any of our past projects that inspired you. We’ll help you create the outdoor space of your dreams.<br/>
+                                    </p>
+                               </div>
+                               <div style="font-size:16px; color: black; font-family: Verdana, Arial, Tahoma, Serif;">
+                                    <br/>
+                                    <p style="margin:0px;font-size:16px; color: black; font-family: Verdana, Arial, Tahoma, Serif;">
+                                        P.S. Enquire about your quote today<br/>
+                                    </p>
+                               </div>
+                                <div>
+                                    <center>
+                                        <br/>
+                                        <button onclick="https://openingroofspecialists.com.au/customer-jobsite-photos/?vgo_ee=ZYRfiU1p1wdmQ%2FCuJ9NlnFb9clrLpg0Fb7OQ5vhiPds%3D" style="background-color: #4CAF50; border: none; color: white; padding: 10px 22px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; border-radius: 8px;" type="button">Send Me a Quote</button><br/>
+                                    </center>
+                                </div>
+                        <!-- </tr> -->
+                        <!-- <tr> -->
+                            <div>
+                               <img src="/ors_crm/static/image/ors2.jpg" style="margin:auto;width:100%;height:100%;display:block" alt="" />
+                               <br/>
+                           </div>
+                       </td>
+                        </tr>
+                        <tr style="font-size:16px; color: black; font-family: Verdana, Arial, Tahoma, Serif; color: black;"><td>
+                            <center>
+                                Send to: <a href="${'mailto:%s' % object.company_id.email}">
+                                     ${object.company_id.email}
+                                 </a><br/>
+                             </center>
+                         <!-- </tr> -->
+                         <!-- <tr style="font-size:16px; color: black; font-family: Verdana, Arial, Tahoma, Serif; color: black;"> -->
+                             <center>
+                                 <a href="https://openingroofspecialists.activehosted.com/unsubscribe/1">Unsubscribe</a><br/>
+                             </center>
+                        <!-- </tr> -->
+                        <!-- <tr style="font-size:16px; color: black; font-family: Verdana, Arial, Tahoma, Serif; color: black;"> -->
+                            <br/>
+                            <center>
+                                % if object.company_id.street:
+                                    ${object.company_id.street},
+                                % endif
+                                % if object.company_id.stree2:
+                                    ${object.company_id.street2},
+                                % endif
+                                <!-- <br/> -->
+                                ${object.company_id.city},${object.company_id.state_id.name}, ${object.company_id.zip},
+                                <!-- <br/> -->
+                                ${object.company_id.country_id.name}
+                            </center>
+                        </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </field>
+        </record>
+
+        <record id="notining_you" model="mailing.mailing">
+            <field name="name">We’ve been noticing you, noticing us.</field>
+            <field name="subject">We’ve been noticing you, noticing us.</field>
+            <field name="use_in_marketing_automation">True</field>
+            <field name="user_id" ref="base.user_admin"/>
+            <field name="mailing_model_id" ref="crm.model_crm_lead"/>
+            <field name="mailing_domain">[]</field>
+            <field name="reply_to_mode">email</field>
+            <field name="reply_to">${object.company_id.email}</field>
+            <field name="body_html" type="html">
+                <table border="0" cellpadding="0" cellspacing="0" style="border-collapse:collapse;">
+                    <tbody>
+                        <tr><td>
+                            <div>
+                                <img src="/ors_crm/static/image/ors1.jpg" style="margin:auto;width:100%;height:100%;display:inline-block" alt="" />
+                                <br/>
+                            </div>
+                            <div style="font-size:16px; color: black; font-family: Verdana, Arial, Tahoma, Serif; color: black;">
+                                <p style="margin:0px;font-size:16px; color: black; font-family: Verdana, Arial, Tahoma, Serif;">
+                                    Hey,<br/><br/>
+                                </p>
+                            </div>
+                        <!-- </tr> -->
+                        <!-- <tr> -->
+                            <div style="font-size:16px; color: black; font-family: Verdana, Arial, Tahoma, Serif;">
+                                    <br/>
+                                    <p style="margin:0px;font-size:16px; color: black; font-family: Verdana, Arial, Tahoma, Serif;">
+                                        Do you know what our favourite part of our job is? Working with homeowners like you to create an outdoor space that you love.<br/>
+                                    </p>
+                                </div>
+                                <div style="font-size:16px; color: black; font-family: Verdana, Arial, Tahoma, Serif;">
+                                    <br/>
+                                    <p style="margin:0px;font-size:16px; color: black; font-family: Verdana, Arial, Tahoma, Serif;">
+                                        And we’re always grateful to hear how much our customers love their new roofs.<br/>
+                                    </p>
+                                </div>
+                                <div style="font-size:16px; color: black; font-family: Verdana, Arial, Tahoma, Serif;">
+                                    <br/>
+                                    <p style="margin:0px;font-size:16px; color: black; font-family: Verdana, Arial, Tahoma, Serif;">
+                                        Here are a few things people are saying about us:<br/>
+                                    </p>
+                                </div>
+                                <div style="font-size:16px; color: black; font-family: Verdana, Arial, Tahoma, Serif;">
+                                    <br/>
+                                    <p style="margin:0px; padding-left:10px; font-size:16px; color: black; font-family: Verdana, Arial, Tahoma, Serif;">
+                                        <strong>About our service:</strong><br/>
+                                        <br/>
+                                        “I just wanted to let you guys know how excellent you guys were with your service. From quoting right up to installation, Ian was great with pricing. Lance was great with the measure and wiring instructions. And installation all before Xmas. Jason was the best, very professional and neat, and he talked me through the whole installation process. Well done to all of you. You all come highly recommended for anyone who asks about our opening roof, thank you and well done.”
+                                        - Ivan from Drummoyne
+                                        <br/><br/>
+                                        <strong>About when we work:</strong><br/>
+                                        <br/>
+                                        “Please thank Dale and Tim for me. They worked through yesterday’s poor weather to complete the job. We appreciate their efforts.”
+                                        - Stephen from Annandale
+                                        <br/><br/>
+                                        <strong>About how we work:</strong><br/>
+                                        <br/>
+                                        “What an absolute pleasure of a company to deal with . . .  from the opening quote to dealing with some change in plans . . . to Lance with the final measure &amp; detailed explanation of how they were going to install my roof . . . to Kerrie &amp; Sharon in the office with payments &amp; updates on my job . . .  I even got to chat to Alex, the owner, who helped facilitate my job a bit quicker to have it completed for an important family get together . . .  And finally to Dale &amp; his assistant (good blokes) who installed the roof professionally arriving well before time every day &amp; cleaning up all the leftovers at the end of the job . . .”
+                                        - Glen from Caringbah South
+                                        <br/><br/>
+                                    </p>
+                                </div>
+                                <div style="font-size:16px; color: black; font-family: Verdana, Arial, Tahoma, Serif;">
+                                    <br/>
+                                    <p style="margin:0px;font-size:16px; color: black; font-family: Verdana, Arial, Tahoma, Serif;">
+                                        And now we’re blushing so we won’t post any more reviews here. But if you want to read more, click below to read all of our testimonials. <br/>
+                                    </p>
+                               </div>
+                                <div>
+                                    <center>
+                                        <br/>
+                                        <button onclick="https://openingroofspecialists.com.au/category/testimonials/?vgo_ee=ZYRfiU1p1wdmQ%2FCuJ9NlnFb9clrLpg0Fb7OQ5vhiPds%3D" style="background-color: #4CAF50; border: none; color: white; padding: 10px 22px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; border-radius: 8px;" type="button">More Reviews</button>
+                                    </center>
+                                </div>
+                                <div style="font-size:16px; color: black; font-family: Verdana, Arial, Tahoma, Serif;">
+                                    <br/>
+                                    <p style="margin:0px;font-size:16px; color: black; font-family: Verdana, Arial, Tahoma, Serif;">
+                                        We believe a job is only done when our customers are satisfied. When you work with <strong>Opening Roof Specialists</strong>, you can rest assured that each part of the process will be smooth and hassle-free.<br/>
+                                    </p>
+                                </div>
+                                <div style="font-size:16px; color: black; font-family: Verdana, Arial, Tahoma, Serif;">
+                                    <br/>
+                                    <p style="margin:0px;font-size:16px; color: black; font-family: Verdana, Arial, Tahoma, Serif;">
+                                        Thank you,<br/>
+                                        <strong>The Team at Opening Roof Specialists</strong><br/>
+                                    </p>
+                                </div>
+                                <div style="font-size:16px; color: black; font-family: Verdana, Arial, Tahoma, Serif;">
+                                    <br/>
+                                    <p style="margin:0px;font-size:16px; color: black; font-family: Verdana, Arial, Tahoma, Serif;">
+                                        P.S. If you haven’t already, get your free quote today:<br/>
+                                    </p>
+                                </div>
+                                <div>
+                                    <center>
+                                        <br/>
+                                        <button onclick="https://openingroofspecialists.com.au/customer-jobsite-photos/?vgo_ee=ZYRfiU1p1wdmQ%2FCuJ9NlnFb9clrLpg0Fb7OQ5vhiPds%3D" style="background-color: #4CAF50; border: none; color: white; padding: 10px 22px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; border-radius: 8px;" type="button">Send Me a Quote</button><br/>
+                                    </center>
+                                </div>
+                        <!-- </tr> -->
+                        <!-- <tr> -->
+                            <div>
+                               <img src="/ors_crm/static/image/ors2.jpg" style="margin:auto;width:100%;height:100%;display:block" alt="" />
+                               <br/>
+                           </div>
+                       </td>
+                        </tr>
+                        <tr style="font-size:16px; color: black; font-family: Verdana, Arial, Tahoma, Serif; color: black;"><td>
+                            <center>
+                                Send to: <a href="${'mailto:%s' % object.company_id.email}">
+                                     ${object.company_id.email}
+                                 </a><br/>
+                             </center>
+                         <!-- </tr> -->
+                         <!-- <tr style="font-size:16px; color: black; font-family: Verdana, Arial, Tahoma, Serif; color: black;"> -->
+                             <center>
+                                 <a href="https://openingroofspecialists.activehosted.com/unsubscribe/1">Unsubscribe</a><br/>
+                             </center>
+                        <!-- </tr> -->
+                        <!-- <tr style="font-size:16px; color: black; font-family: Verdana, Arial, Tahoma, Serif; color: black;"> -->
+                            <br/>
+                            <center>
+                                % if object.company_id.street:
+                                    ${object.company_id.street},
+                                % endif
+                                % if object.company_id.stree2:
+                                    ${object.company_id.street2},
+                                % endif
+                                <!-- <br/> -->
+                                ${object.company_id.city},${object.company_id.state_id.name}, ${object.company_id.zip},
+                                <!-- <br/> -->
+                                ${object.company_id.country_id.name}
+                            </center>
+                        </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </field>
+        </record>
+
+        <record id="more_than_a_roof" model="mailing.mailing">
+            <field name="name">When is a roof more than a roof</field>
+            <field name="subject">When is a roof more than a roof</field>
+            <field name="use_in_marketing_automation">True</field>
+            <field name="user_id" ref="base.user_admin"/>
+            <field name="mailing_model_id" ref="crm.model_crm_lead"/>
+            <field name="mailing_domain">[]</field>
+            <field name="reply_to_mode">email</field>
+            <field name="reply_to">${object.company_id.email}</field>
+            <field name="body_html" type="html">
+                <table border="0" cellpadding="0" cellspacing="0" style="border-collapse:collapse;">
+                    <tbody>
+                        <tr><td>
+                            <div>
+                                <img src="/ors_crm/static/image/ors1.jpg" style="margin:auto;width:100%;height:100%;display:inline-block" alt="" />
+                                <br/>
+                            </div>
+                            <div style="font-size:16px; color: black; font-family: Verdana, Arial, Tahoma, Serif; color: black;">
+                                <p style="margin:0px;font-size:16px; color: black; font-family: Verdana, Arial, Tahoma, Serif;">
+                                    Hey,<br/><br/>
+                                </p>
+                            </div>
+                        <!-- </tr> -->
+                        <!-- <tr> -->
+                            <div style="font-size:16px; color: black; font-family: Verdana, Arial, Tahoma, Serif;">
+                                    <br/>
+                                    <p style="margin:0px;font-size:16px; color: black; font-family: Verdana, Arial, Tahoma, Serif;">
+                                        We care deeply about what’s happening over your head. Literally. We believe that an opening roof is the most underappreciated (and most important) part of a home. <br/>
+                                    </p>
+                                </div>
+                                <div style="font-size:16px; color: black; font-family: Verdana, Arial, Tahoma, Serif;">
+                                    <br/>
+                                    <p style="margin:0px;font-size:16px; color: black; font-family: Verdana, Arial, Tahoma, Serif;">
+                                        A roof is a shelter from the elements, yes. But ours are so much more. From the quality of our materials to our innovative designs, we help families create unique outdoor spaces to enjoy together. And we would love nothing more than to do that for you.<br/>
+                                    </p>
+                                </div>
+                                <div style="font-size:16px; color: black; font-family: Verdana, Arial, Tahoma, Serif;">
+                                    <br/>
+                                    <p style="margin:0px;font-size:16px; color: black; font-family: Verdana, Arial, Tahoma, Serif;">
+                                        Here are a handful of reasons why we think you will love working with us:<br/>
+                                    </p>
+                                </div>
+                                <div style="font-size:16px; color: black; font-family: Verdana, Arial, Tahoma, Serif;">
+                                    <br/>
+                                    <p style="margin:0px; padding-left:15px; font-size:16px; color: black; font-family: Verdana, Arial, Tahoma, Serif;">
+                                        <ul>
+                                            <li><strong>Our roofs are low-maintenance.</strong> They NEVER rust and will NEVER require a coat of paint. Seriously.</li>
+                                            <li><strong>10 years, worry-free.</strong> Even though you won’t need it, we still offer a MINIMUM 10-year warranty. (T &amp; C apply) So you can sleep soundly at night, knowing that your opening roof system is protected for years to come.</li>
+                                            <li><strong>Custom designs that suit your style.</strong> We’re versatile! We offer more than 100 colours/textures and build our roofs to fit your vision.</li>
+                                            <li><strong>We’re the best at what we do.</strong> We have more than 30 years of experience delivering beautiful opening roofs with quality customer service satisfaction to match.</li>
+                                            <li><strong>We’re with you every step of the way.</strong> Our team is trained to make your roof project easy and hassle-free.</li>
+                                        </ul>  
+                                    </p>
+                                </div>
+                                <div style="font-size:16px; color: black; font-family: Verdana, Arial, Tahoma, Serif;">
+                                    <br/>
+                                    <p style="margin:0px;font-size:16px; color: black; font-family: Verdana, Arial, Tahoma, Serif;">
+                                        Starting your project is easy!  You’ll meet with one of our <strong>Opening Roof Specialists</strong> Design Consultants before work even begins to make sure we get the measurements and specifications for your home just right.<br/>
+                                    </p>
+                               </div>
+                               <div style="font-size:16px; color: black; font-family: Verdana, Arial, Tahoma, Serif;">
+                                    <br/>
+                                    <p style="margin:0px; padding-left;10px; font-size:16px; color: black; font-family: Verdana, Arial, Tahoma, Serif;">
+                                        If you would like an Opening Roof project cost estimate, please click the button below.<br/>
+                                    </p>
+                               </div>
+                                <div>
+                                    <center>
+                                        <br/>
+                                        <button onclick="https://openingroofspecialists.com.au/customer-jobsite-photos/?vgo_ee=ZYRfiU1p1wdmQ%2FCuJ9NlnFb9clrLpg0Fb7OQ5vhiPds%3D" style="background-color: #4CAF50; border: none; color: white; padding: 10px 22px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; border-radius: 8px;" type="button">Send Me a Cost Estimate</button>
+                                    </center>
+                                </div>
+                                <div style="font-size:16px; color: black; font-family: Verdana, Arial, Tahoma, Serif;">
+                                    <br/>
+                                    <p style="margin:0px;font-size:16px; color: black; font-family: Verdana, Arial, Tahoma, Serif;">
+                                        We’re a family-owned and operated company, which is why we know that a roof is never just a roof.<br/>
+                                    </p>
+                                </div>
+                                <div style="font-size:16px; color: black; font-family: Verdana, Arial, Tahoma, Serif;">
+                                    <br/>
+                                    <p style="margin:0px;font-size:16px; color: black; font-family: Verdana, Arial, Tahoma, Serif;">
+                                        It’s about creating a space where you and your loved ones can gather for years to come. When you choose to work with us, we’ll take care of you just like you’re part of our family.<br/>
+                                    </p>
+                                </div>
+                                <div style="font-size:16px; color: black; font-family: Verdana, Arial, Tahoma, Serif;">
+                                    <br/>
+                                    <p style="margin:0px;font-size:16px; color: black; font-family: Verdana, Arial, Tahoma, Serif;">
+                                        We look forward to working with you soon,<br/>
+                                        <strong>The Team at Opening Roof Specialists</strong><br/>
+                                    </p>
+                                </div>
+                                <div style="font-size:16px; color: black; font-family: Verdana, Arial, Tahoma, Serif;">
+                                    <br/>
+                                    <p style="margin:0px;font-size:16px; color: black; font-family: Verdana, Arial, Tahoma, Serif;">
+                                        P.S. Check out our recent projects to get inspired!<br/>
+                                        <a href="https://openingroofspecialists.com.au/category/testimonials/">https://openingroofspecialists.com.au/category/testimonials</a>
+                                    </p>
+                                </div>
+                        <!-- </tr> -->
+                        <!-- <tr> -->
+                            <div>
+                               <img src="/ors_crm/static/image/ors2.jpg" style="margin:auto;width:100%;height:100%;display:block" alt="" />
+                               <br/>
+                           </div>
+                       </td>
+                        </tr>
+                        <tr style="font-size:16px; color: black; font-family: Verdana, Arial, Tahoma, Serif; color: black;"><td>
+                            <center>
+                                Send to: <a href="${'mailto:%s' % object.company_id.email}">
+                                     ${object.company_id.email}
+                                 </a><br/>
+                             </center>
+                         <!-- </tr> -->
+                         <!-- <tr style="font-size:16px; color: black; font-family: Verdana, Arial, Tahoma, Serif; color: black;"> -->
+                             <center>
+                                 <a href="https://openingroofspecialists.activehosted.com/unsubscribe/1">Unsubscribe</a><br/>
+                             </center>
+                        <!-- </tr> -->
+                        <!-- <tr style="font-size:16px; color: black; font-family: Verdana, Arial, Tahoma, Serif; color: black;"> -->
+                            <br/>
+                            <center>
+                                % if object.company_id.street:
+                                    ${object.company_id.street},
+                                % endif
+                                % if object.company_id.stree2:
+                                    ${object.company_id.street2},
+                                % endif
+                                <!-- <br/> -->
+                                ${object.company_id.city},${object.company_id.state_id.name}, ${object.company_id.zip},
+                                <!-- <br/> -->
+                                ${object.company_id.country_id.name}
+                            </center>
+                        </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </field>
+        </record>
+
+        <record id="new_opening_roof" model="mailing.mailing">
+            <field name="name">Why the time for a new opening roof is now.</field>
+            <field name="subject">Why the time for a new opening roof is now.</field>
+            <field name="use_in_marketing_automation">True</field>
+            <field name="user_id" ref="base.user_admin"/>
+            <field name="mailing_model_id" ref="crm.model_crm_lead"/>
+            <field name="mailing_domain">[]</field>
+            <field name="reply_to_mode">email</field>
+            <field name="reply_to">${object.company_id.email}</field>
+            <field name="body_html" type="html">
+                <table border="0" cellpadding="0" cellspacing="0" style="border-collapse:collapse;">
+                    <tbody>
+                        <tr><td>
+                            <div>
+                                <img src="/ors_crm/static/image/ors1.jpg" style="margin:auto;width:100%;height:100%;display:inline-block" alt="" />
+                                <br/>
+                            </div>
+                            <div style="font-size:16px; color: black; font-family: Verdana, Arial, Tahoma, Serif; color: black;">
+                                <p style="margin:0px;font-size:16px; color: black; font-family: Verdana, Arial, Tahoma, Serif;">
+                                    Hey,<br/><br/>
+                                </p>
+                            </div>
+                        <!-- </tr> -->
+                        <!-- <tr> -->
+                            <div style="font-size:16px; color: black; font-family: Verdana, Arial, Tahoma, Serif;">
+                                    <br/>
+                                    <p style="margin:0px;font-size:16px; color: black; font-family: Verdana, Arial, Tahoma, Serif;">
+                                        We get it. A new roof is a huge commitment. There are costs involved and it’s not a snap-your-fingers-and-it-happens kind of project.<br/>
+                                    </p>
+                                </div>
+                                <div style="font-size:16px; color: black; font-family: Verdana, Arial, Tahoma, Serif;">
+                                    <br/>
+                                    <p style="margin:0px;font-size:16px; color: black; font-family: Verdana, Arial, Tahoma, Serif;">
+                                        But here’s the thing. You started looking for a new outdoor opening roof for a reason. <br/>
+                                    </p>
+                                </div>
+                                <div style="font-size:16px; color: black; font-family: Verdana, Arial, Tahoma, Serif;">
+                                    <br/>
+                                    <p style="margin:0px;font-size:16px; color: black; font-family: Verdana, Arial, Tahoma, Serif;">
+                                        Maybe you’re not able to enjoy your backyard right now. Maybe your current roof is damaged. If you’re not able to fully enjoy your home and an opening roof could change that - why not go for it?<br/>
+                                    </p>
+                                </div>
+                                <div style="font-size:16px; color: black; font-family: Verdana, Arial, Tahoma, Serif;">
+                                    <br/>
+                                    <p style="margin:0px;font-size:16px; color: black; font-family: Verdana, Arial, Tahoma, Serif;">
+                                        Here are some of the common objections we hear:<br/>
+                                    </p>
+                                </div>
+                                <div style="font-size:16px; color: black; font-family: Verdana, Arial, Tahoma, Serif;">
+                                    <br/>
+                                    <p style="margin:0px;font-size:16px; color: black; font-family: Verdana, Arial, Tahoma, Serif;">
+                                        <i>“But it’s too expensive!”</i><br/>
+                                    </p>
+                                </div>
+                                <div style="font-size:16px; color: black; font-family: Verdana, Arial, Tahoma, Serif;">
+                                    <br/>
+                                    <p style="margin:0px;font-size:16px; color: black; font-family: Verdana, Arial, Tahoma, Serif;">
+                                        Did you know that new roofs can INCREASE property value? A roof is an investment in the asset that is your home. And, we provide different payment options to suit your needs.
+                                    </p>
+                                </div>
+                                <div style="font-size:16px; color: black; font-family: Verdana, Arial, Tahoma, Serif;">
+                                    <br/>
+                                    <p style="margin:0px;font-size:16px; color: black; font-family: Verdana, Arial, Tahoma, Serif;">
+                                        <i>“I’m not sure I can afford the upkeep.”</i><br/>
+                                    </p>
+                                </div>
+                                <div style="font-size:16px; color: black; font-family: Verdana, Arial, Tahoma, Serif;">
+                                    <br/>
+                                    <p style="margin:0px;font-size:16px; color: black; font-family: Verdana, Arial, Tahoma, Serif;">
+                                        We offer a 10-year warranty (T &amp; Cs apply) so you don’t have to worry about maintenance for the next decade. Our roofs are fret-free.<br/>
+                                    </p>
+                               </div>
+                               <div style="font-size:16px; color: black; font-family: Verdana, Arial, Tahoma, Serif;">
+                                    <br/>
+                                    <p style="margin:0px;font-size:16px; color: black; font-family: Verdana, Arial, Tahoma, Serif;">
+                                        <i>“Frankly, the process and time commitment worry me. Having people coming in and out of my house is not convenient.”</i><br/>
+                                    </p>
+                                </div>
+                               <div style="font-size:16px; color: black; font-family: Verdana, Arial, Tahoma, Serif;">
+                                    <br/>
+                                    <p style="margin:0px;font-size:16px; color: black; font-family: Verdana, Arial, Tahoma, Serif;">
+                                        In the words of one of our clients: “Being home with a newborn and having the installation made me a little nervous but the boys were nothing but respectful and courteous!” - Rebecca from Bondi<br/>
+                                    </p>
+                               </div>
+                               <div style="font-size:16px; color: black; font-family: Verdana, Arial, Tahoma, Serif;">
+                                    <br/>
+                                    <p style="margin:0px;font-size:16px; color: black; font-family: Verdana, Arial, Tahoma, Serif;">
+                                        Would you like a quote estimate? If so, click on the link below.<br/>
+                                    </p>
+                               </div>
+                                <div>
+                                    <center>
+                                        <br/>
+                                        <button onclick="https://openingroofspecialists.com.au/customer-jobsite-photos/?vgo_ee=ZYRfiU1p1wdmQ%2FCuJ9NlnFb9clrLpg0Fb7OQ5vhiPds%3D" style="background-color: #4CAF50; border: none; color: white; padding: 10px 22px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; border-radius: 8px;" type="button">Free Opening Roof Estimate</button>
+                                    </center>
+                                </div>
+                                <div style="font-size:16px; color: black; font-family: Verdana, Arial, Tahoma, Serif;">
+                                    <br/>
+                                    <p style="margin:0px;font-size:16px; color: black; font-family: Verdana, Arial, Tahoma, Serif;">
+                                        Homes are to be lived in and enjoyed. What better time to start living better than now?<br/>
+                                    </p>
+                                </div>
+                                <div style="font-size:16px; color: black; font-family: Verdana, Arial, Tahoma, Serif;">
+                                    <br/>
+                                    <p style="margin:0px;font-size:16px; color: black; font-family: Verdana, Arial, Tahoma, Serif;">
+                                        Thank you,<br/>
+                                        <strong>The Team at Opening Roof Specialists</strong><br/>
+                                    </p>
+                                </div>
+                                <div style="font-size:16px; color: black; font-family: Verdana, Arial, Tahoma, Serif;">
+                                    <br/>
+                                    <p style="margin:0px;font-size:16px; color: black; font-family: Verdana, Arial, Tahoma, Serif;">
+                                        P.S. Read why Justin from Northbridge said, “We have been so proud to show off our roof system . . .”<br/>
+                                        <a href="https://openingroofspecialists.com.au/testimonials/justin-from-northbridge-march-2018/?vgo_ee=ZYRfiU1p1wdmQ%2FCuJ9NlnFb9clrLpg0Fb7OQ5vhiPds%3D">https://openingroofspecialists.com.au/testimonials/justin-from-northbridge-march-2018/</a>
+                                    </p>
+                                </div>
+                        <!-- </tr> -->
+                        <!-- <tr> -->
+                            <div>
+                               <img src="/ors_crm/static/image/ors2.jpg" style="margin:auto;width:100%;height:100%;display:block" alt="" />
+                               <br/>
+                           </div>
+                       </td>
+                        </tr>
+                        <tr style="font-size:16px; color: black; font-family: Verdana, Arial, Tahoma, Serif; color: black;"><td>
+                            <center>
+                                Send to: <a href="${'mailto:%s' % object.company_id.email}">
+                                     ${object.company_id.email}
+                                 </a><br/>
+                             </center>
+                         <!-- </tr> -->
+                         <!-- <tr style="font-size:16px; color: black; font-family: Verdana, Arial, Tahoma, Serif; color: black;"> -->
+                             <center>
+                                 <a href="https://openingroofspecialists.activehosted.com/unsubscribe/1">Unsubscribe</a><br/>
+                             </center>
+                        <!-- </tr> -->
+                        <!-- <tr style="font-size:16px; color: black; font-family: Verdana, Arial, Tahoma, Serif; color: black;"> -->
+                            <br/>
+                            <center>
+                                % if object.company_id.street:
+                                    ${object.company_id.street},
+                                % endif
+                                % if object.company_id.stree2:
+                                    ${object.company_id.street2},
+                                % endif
+                                <!-- <br/> -->
+                                ${object.company_id.city},${object.company_id.state_id.name}, ${object.company_id.zip},
+                                <!-- <br/> -->
+                                ${object.company_id.country_id.name}
+                            </center>
+                        </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </field>
+        </record>
+
+
+    </data>
+</odoo>

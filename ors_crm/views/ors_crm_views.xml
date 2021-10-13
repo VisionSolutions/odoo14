@@ -1,0 +1,147 @@
+<odoo>
+<data>
+
+    <!-- CRM Lead view expand -->
+    <record id="ors_crm_lead_view_form_new" model="ir.ui.view">
+        <field name="name">ors.crm.lead.view.form.inherit</field>
+        <field name="model">crm.lead</field>
+        <field name="inherit_id" ref="crm.crm_lead_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='stage_id']" position="before">
+                <field name="lead_stage" widget="statusbar"
+                    options="{'clickable': '1'}"
+                    attrs="{'invisible': ['|', ('active', '=', False), ('type', '=', 'opportunity')]}"/>
+            </xpath>
+            <xpath expr="//field[@name='function']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+            <xpath expr="//field[@name='lang_id']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+            <xpath expr="//field[@name='website']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+
+            <!-- Change position of Source field -->
+            <xpath expr="//field[@name='source_id']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+            <xpath expr="//field[@name='team_id']" position="after">
+                <field name="source_id" string="Lead Source"/>
+            </xpath>
+
+            <xpath expr="//h2/div[1]" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+
+            <xpath expr="//h2/div[4]" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+
+            <!-- Replace position of company name with Title, First Name, Last Name -->
+            <xpath expr="//field[@name='partner_name']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+            <xpath expr="//group[@name='lead_info']/label[@for='contact_name']" position="attributes">
+                <attribute name="string">Company Name</attribute>
+            </xpath>
+            <xpath expr="//group[@name='lead_info']/div[hasclass('o_row')]" position="replace">
+                <div class="o_row">
+                    <field name="partner_name"/>
+                </div>
+            </xpath>
+            <xpath expr="//field[@name='partner_name']" position="after">
+                <label for="first_name" string="Name"/>
+                <div class="o_row">
+                    <field name="title" placeholder="Title" domain="[]" options='{"no_open": True}'/>
+                    <field name="first_name" placeholder="First Name"/>
+                    <field name="last_name" placeholder="Last Name"/>
+                </div>
+            </xpath>
+
+            <xpath expr="//group[@name='lead_info']/div[hasclass('o_row')]" position="after">
+                <label for="first_name" string="Contact Name" invisible="1"/>
+                <div class="o_row">
+                    <!-- <field name="title" placeholder="Title" domain="[]" options='{"no_open": True}'/> -->
+                    <field name="contact_name" invisible="1"/>
+                </div>
+            </xpath>
+
+            <!-- <field name="date_closed" position="attributes">
+                <attribute name="readonly">1</attribute>
+            </field> -->
+
+            <xpath expr="//group[@name='opportunity_info']" position="after">
+                <group attrs="{'invisible': [('type', '=', 'opportunity')]}">
+                    <!-- <field name="request_type"/> -->
+                    <field name="approximate_area" placeholder="Approximate Size (m2)"/>
+                    <!-- <field name="is_newspaper_subscribe"/> -->
+                    <field name="build_time"/>
+                    <field name="construction_type"/>
+                    <field name="budget" invisible="1"/>
+                    <field name="budget_new"/>
+                </group>
+                <!-- <group attrs="{'invisible': [('type', '=', 'opportunity')]}"> -->
+                    <!-- <field name="industry"/>
+                    <field name="no_of_employee"/> -->
+                    <!-- <field name="know_about_company_id"/> -->
+                    <!-- <field name="product"/> -->
+                <!-- </group> -->
+
+                <!-- <group name="additional_info_left" string="Additional Information" attrs="{'invisible': [('type', '=', 'opportunity')]}">
+                    <field name="tracking_medium"/>
+                    <field name="tracking_source"/>
+                    <field name="tracking_url" widget="url" placeholder="e.g. https://www.odoo.com"/>
+                </group>
+                <group name="additional_info_right" string="&#x2063;" attrs="{'invisible': [('type', '=', 'opportunity')]}">
+                    <field name="tracking_campaign"/>
+                    <field name="tracking_content"/>
+                    <field name="tracking_term"/>
+                </group> -->
+
+                <!-- It show for lead and opportunity view -->
+                <group string="System Information">
+                    <field name="create_uid"/>
+                    <field name="create_date"/>
+                </group>
+                <group string="&#x2063;">
+                    <field name="write_uid"/>
+                    <field name="write_date"/>
+                </group>
+
+                <group name="custom_links_left" string="Custom Links" attrs="{'invisible': [('type', '=', 'opportunity')]}">
+                </group>
+                <group name="custom_links_right" string="&#x2063;" attrs="{'invisible': [('type', '=', 'opportunity')]}">
+                </group>
+
+                <group attrs="{'invisible': [('type', '=', 'opportunity')]}">
+                    <field name="converted_date"/>
+                    <field name="salesforce_create_date" invisible="1"/>
+                </group>
+                <group  attrs="{'invisible': [('type', '=', 'opportunity')]}">
+                    <!-- <field name="date_closed_new"/> -->
+                    <field name="date_closed" invisible="1"/>
+                </group>
+
+            </xpath>
+        </field>
+    </record>
+
+    <record id="crm_case_tree_view_oppor_new" model="ir.ui.view">
+        <field name="name">ors.crm.lead.view.tree.inherit</field>
+        <field name="model">crm.lead</field>
+        <field name="inherit_id" ref="crm.crm_case_tree_view_oppor"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='email_from']" position="after">
+                <field name="mobile"/>
+            </xpath>
+            <xpath expr="//field[@name='email_from']" position="before">
+                <field name="amount"/>
+            </xpath>
+        </field>
+    </record>
+
+
+
+  </data>
+</odoo>

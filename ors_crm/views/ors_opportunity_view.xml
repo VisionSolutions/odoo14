@@ -1,0 +1,260 @@
+<odoo>
+<data>
+
+    <record id="calendar.view_calendar_event_calendar" model="ir.ui.view">
+        <field name="name">calendar.event.calendar</field>
+        <field name="model">calendar.event</field>
+        <field name="priority" eval="2"/>
+        <field name="arch" type="xml">
+            <calendar js_class="attendee_calendar" string="Meetings" date_start="start" date_stop="stop" date_delay="duration" all_day="allday"
+                event_open_popup="true"
+                event_limit="5"
+                color="color">
+                <field name="attendee_status"/>
+                <field name="color"/>
+                <field name="user_id" string="Responsible" filters="1" widget="many2one_avatar_user"/>
+                <field name="partner_ids" widget="many2many_tags_avatar" write_model="calendar.contacts" write_field="partner_id" avatar_field="image_128"/>
+                <field name="is_highlighted" invisible="1"/>
+                <field name="description"/>
+                <field name="privacy"/>
+
+                <field name="recurrency" invisible="1"/>
+                <field name="recurrence_update" invisible="1"/>
+            </calendar>
+        </field>
+    </record>
+
+    <!-- For open List view of calendar and own meeting from lead/opportunity -->
+    <!-- <record id="crm.act_crm_opportunity_calendar_event_new" model="ir.actions.act_window">
+        <field name="name">Meetings</field>
+        <field name="res_model">calendar.event</field>
+        <field name="view_mode">tree,form,calendar</field>
+        <field name="domain">[('opportunity_id','=', active_id)]</field>
+        <field name="context">{'default_duration': 4.0, 'default_opportunity_id': active_id}</field>
+    </record> -->
+
+    <record id="color_calendar_event_form_view" model="ir.ui.view">
+            <field name="name">calendar.event.form.inherit</field>
+            <field name="model">calendar.event</field>
+            <field name="inherit_id" ref="calendar.view_calendar_event_form"/>
+            <field name="arch" type="xml">
+            <field name="user_id" position="after">
+              <field name="color" invisible="1"/>
+            </field>
+            </field>
+        </record>
+
+    <record id="color_view_users_form" model="ir.ui.view">
+            <field name="name">res.users.form.inherit</field>
+            <field name="model">res.users</field>
+            <field name="inherit_id" ref="base.view_users_form"/>
+            <field name="arch" type="xml">
+            <field name="tz" position="after">
+              <field name="color" />
+            </field>
+            </field>
+        </record>
+
+    <record id="lead_amount_kanban_view" model="ir.ui.view">
+        <field name="name">crm.lead.amount</field>
+        <field name="model">crm.lead</field>
+        <field name="inherit_id" ref="crm.crm_case_kanban_view_leads"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='expected_revenue']" position="after">
+                <field name="amount"/>
+            </xpath>
+            <xpath expr="//progressbar" position="replace">
+                <progressbar field="activity_state" colors='{"planned": "success", "today": "warning", "overdue": "danger"}' sum_field="amount" help="This bar allows to filter the opportunities based on scheduled activities."/>
+            </xpath>
+            <xpath expr="//div[hasclass('o_kanban_record_subtitle')]" position="replace">
+                <div class="o_kanban_record_subtitle">
+                    <t t-if="record.amount.raw_value">
+                        <field name="amount" widget="monetary" options="{'currency_field': 'company_currency'}"/>
+                        <span t-if="record.recurring_revenue and record.recurring_revenue.raw_value"> + </span>
+                    </t>
+                    <t t-if="record.recurring_revenue and record.recurring_revenue.raw_value">
+                        <field name="recurring_revenue" widget="monetary" options="{'currency_field': 'company_currency'}"/>
+                        <field name="recurring_plan"/>
+                    </t>
+                </div>
+            </xpath>
+        </field>
+    </record>
+
+    <!-- Opportunity Form View Expand -->
+    <record id="ors_crm_opportunity_view_form_new" model="ir.ui.view">
+        <field name="name">ors.crm.opportunity.view.form.inherit</field>
+        <field name="model">crm.lead</field>
+        <field name="inherit_id" ref="crm.crm_lead_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@id='mobile_page_lead']" position="replace"/>
+            <xpath expr="//label[@for='mobile_page_lead']" position="replace"/>
+            <field name="phone" position="after">
+                <label for="mobile_page_lead" class="oe_inline"/>
+                <field name="mobile" id="mobile_page_lead" widget="phone"/>
+            </field>
+
+            <xpath expr="//group[@name='opportunity_partner']/field[@name='partner_id']" position="before">
+                <field name="jno"/>
+            </xpath>
+
+            <xpath expr="//group[@name='opportunity_partner']/field[@name='partner_id']" position="after">
+                <label for="street" string="Address"/>
+                <div class="o_address_format">
+                    <field name="street" placeholder="Street..." class="o_address_street"/>
+                    <field name="street2" placeholder="Street 2..." class="o_address_street"/>
+                    <field name="city" placeholder="City" class="o_address_city"/>
+                    <field name="state_id" class="o_address_state" placeholder="State" options="{&quot;no_open&quot;: True}"/>
+                    <field name="zip" placeholder="ZIP" class="o_address_zip"/>
+                    <field name="country_id" placeholder="Country" class="o_address_country" options="{&quot;no_open&quot;: True, &quot;no_create&quot;: True}"/>
+                </div>
+            </xpath>
+
+            <xpath expr="//field[@name='date_deadline']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+
+            <xpath expr="//field[@name='user_id']" position="before">
+                <field name="site_unit" attrs="{'invisible': [('type', '=', 'lead')]}"/>
+                <label for="site_lot" string="Site Address" attrs="{'invisible': [('type', '=', 'lead')]}"/>
+                <div class="o_address_format" attrs="{'invisible': [('type', '=', 'lead')]}">
+                    <field name="site_lot"  placeholder="Site Lot..."/>
+                    <field name="site_street" placeholder="Site Street No..." class="o_address_street"/>
+                    <field name="site_street2" placeholder="Site Street..." class="o_address_street"/>
+                    <field name="site_city" placeholder="Site Suburb" class="o_address_city"/>
+                    <field name="site_state_id" class="o_address_state" placeholder="Site State" options='{"no_open": True}'/>
+                    <field name="site_zip" placeholder="Site PostCode" class="o_address_zip"/>
+                </div>
+                <field name="site_contact_name" attrs="{'invisible': [('type', '=', 'lead')]}"/>
+                <field name="site_phone" widget="phone" attrs="{'invisible': [('type', '=', 'lead')]}"/>
+                <field name="site_email_from" string="Email" placeholder="Site Email" widget="email" attrs="{'invisible': [('type', '=', 'lead')]}"/>
+                <!-- <field name="site_country_id" placeholder="Site Country" class="o_address_country" options='{"no_open": True, "no_create": True}'/> -->
+                <!-- <group string="Site" attrs="{'invisible': [('type', '=', 'lead')]}"> -->
+                <!-- <field name="site_as_above"/> -->
+                <!-- <div attrs="{'invisible': [('type', '=', 'lead')]}"> -->
+                <!-- <span attrs="{'invisible': [('type', '=', 'lead')]}"><strong> Site</strong></span> -->
+                <!-- </div> -->
+                <!-- </group> -->
+            </xpath>
+
+            <xpath expr="//page[@name='lead']/group/group/field[@name='source_id']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+
+            <!-- <field name="date_closed" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </field> -->
+
+            <xpath expr="//group[@name='opportunity_info']" position="after">
+                <!-- <group attrs="{'invisible': [('type', '=', 'lead')]}"> -->
+                <group>
+                    <!-- <field name="business_type"/> -->
+                    <!-- <field name="primary_campaign_source"/> -->
+                    <!-- <field name="enquiry_number"/> -->
+                    <field name="design_consultants" invisible="1"/>
+                    <!-- <field name="source_id" string="Lead Source"/> -->
+                    <!-- <field name="site_map"/> -->
+                    <group attrs="{'invisible': [('type', '=', 'lead')]}">
+                        <button name="map_redirection" type="object" class="oe_stat_button" icon="fa-globe icon">
+                            <div class="o_field_widget o_stat_info">
+                                <span class="o_stat_text">Map</span>
+                            </div>
+                        </button>
+                    </group>
+                    <group attrs="{'invisible': [('type', '=', 'opportunity')]}">
+                        <button name="leads_map_redirection" type="object" class="oe_stat_button" icon="fa-globe icon">
+                            <div class="o_field_widget o_stat_info">
+                                <span class="o_stat_text">Map</span>
+                            </div>
+                        </button>
+                    </group>
+                </group>
+                <group attrs="{'invisible': [('type', '=', 'lead')]}">
+                    <field name="salesforce_create_date" invisible="1"/>
+                    <!-- <field name="date_closed_new" /> -->
+                    <field name="date_closed" invisible="0"/>
+                    <field name="amount"/>
+                    <field name="contract_amount"/>
+                </group>
+
+                <group attrs="{'invisible': [('type', '=', 'lead')]}">
+                    <field name="next_step"/>
+                    <field name="estimated_purchase_month"/>
+                    <field name="estimated_purchase_month_date"/>
+                    <field name="finance_required"/>
+                </group>
+                <group attrs="{'invisible': [('type', '=', 'lead')]}">
+                    <field name="date_variation"/>
+                    <field name="variation_amount"/>
+                    <field name="calculated_amount"/>
+                </group>
+
+                <!-- <group string="&#x2063;" attrs="{'invisible': [('type', '=', 'lead')]}"> -->
+                    <!-- <field name="number_stories"/> -->
+                    <!-- <field name="square_meters"/> -->
+                <!-- </group> -->
+
+                <group string="HBCF" attrs="{'invisible': [('type', '=', 'lead')]}">
+                    <field name="hbcf_required"/>
+                    <!-- <field name="hbcf_status"/> -->
+                    <!-- <field name="hbcf_status_date"/> -->
+                </group>
+                <group string="&#x2063;" attrs="{'invisible': [('type', '=', 'lead')]}">
+                    <field name="hbcf_policy_no"/>
+                    <!-- <field name="hbcf_not"/> -->
+                </group>
+
+                <!-- <group string="Job" attrs="{'invisible': [('type', '=', 'lead')]}">
+                    <field name="job_start_date"/>
+                    <field name="job_end_date"/>
+                    <field name="job_days"/>
+                    <field name="installed_by"/>
+                    <field name="trade_assistant"/>
+                </group>
+                <group string="&#x2063;" attrs="{'invisible': [('type', '=', 'lead')]}">
+                    <field name="job_status"/>
+                    <field name="jno"/>
+                    <field name="job_status_note"/>
+                </group> -->
+
+                <group string="Payments" attrs="{'invisible': [('type', '=', 'lead')]}">
+                    <field name="deposit_payment"/>
+                    <field name="check_measure"/>
+                    <field name="start_payment"/>
+                    <!-- <field name="progress_payment2"/>
+                    <field name="progress_payment3"/> -->
+                    <field name="completion_payment"/>
+                    <field name="total_payments"/>
+                </group>
+                <group name="site_map_right" string="&#x2063;" attrs="{'invisible': [('type', '=', 'lead')]}">
+                    <field name="job_start_date"/>
+                    <field name="job_end_date"/>
+                    <field name="job_days" invisible="1"/>
+                    <field name="job_days_new"/>
+                    <field name="installed_by"/>
+                    <field name="trade_assistant"/>
+                </group>
+            </xpath>
+        </field>
+    </record>
+
+    <!-- Opportunity Tree View Expand -->
+    <record id="crm_case_tree_view_opportunity_inherit" model="ir.ui.view">
+        <field name="name">ors.crm.lead.opportunity.tree.view.inherit</field>
+        <field name="model">crm.lead</field>
+        <field name="inherit_id" ref="crm.crm_case_tree_view_oppor"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='activity_date_deadline_my']" position="after">
+                <field name="date_closed" string="Closed Date"/>
+            </xpath>
+            <xpath expr="//field[@name='create_date']" position="after">
+                <field name="jno"/>
+            </xpath>
+            <xpath expr="//field[@name='expected_revenue']" position="after">
+                <field name="day_close"/>
+            </xpath>
+        </field>
+    </record>
+
+</data>
+</odoo>

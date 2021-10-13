@@ -1,0 +1,513 @@
+<?xml version="1.0"?>
+<odoo>
+    <data noupdate="0">
+
+        <record id="crm_lead_mail_brochure_attchment" model="ir.attachment">
+            <field name="name">2021 05 ORS Brochure 2021 - Low Res.pdf</field>
+            <field name="datas" type="base64" file="ors_crm/static/2021 05 ORS Brochure 2021 - Low Res.pdf"></field>
+            <field name="res_model">crm.lead</field>
+        </record>
+
+        <!-- Meeting Confirmation - Jason -->
+        <record id="template_meeting_confirmation_new1" model="mail.template">
+            <field name="name">Meeting Confirmation – Jason</field>
+            <field name="model_id" ref="crm.model_crm_lead"/>
+            <field name="email_from">${(object.user_id.partner_id.email or user.login or '') | safe}</field>
+            <field name="email_to">${('' if object.partner_id.email and object.partner_id.email == object.email else object.email) | safe}</field>
+            <!-- <field name="partner_to">${object.partner_id.id if object.partner_id.email and object.partner_id.email == object.email else False}</field> -->
+            <!-- <field name="subject">Meeting Confirmation - ${object.first_name if object.first_name else object.partner_id.name}</field> -->
+            <field name="subject">Opening Roof Specialists</field>
+            <!-- <field name="lang">${object.partner_id.lang}</field> -->
+            <field name="body_html" type="html">
+
+                <div style="font-size:11px;font-family: Calibri;">
+                    <p style="margin:0px;font-size:11px;font-family:Calibri;">
+                        Hi ${object.first_name if object.first_name else object.partner_id.name},<br/><br/>
+                    </p>
+                    <table border="0" cellpadding="0" cellspacing="0" style="border-collapse:collapse;">
+                        <tbody><tr>
+                            <td>
+                                <div style="font-size:11px;font-family:Calibri;">
+                                    <br/>
+                                    <p style="margin:0px;font-size:11px;font-family:Calibri;">
+                                        It was nice to speak with you about an opening roof solution to create the ultimate outdoor experience.<br/>
+                                    </p>
+                                </div>
+
+                                <div style="font-size:11px;font-family:Calibri;">
+                                    <br/>
+                                    <p style="margin:0px;font-size:11px;font-family:Calibri;">
+                                        I can confirm our Design Consultant, Jason Scully will be meeting with you at 7:30am on Thursday 13th May.<br/>
+                                    </p>
+                                </div>
+
+                                <div style="font-size:11px;font-family:Calibri;">
+                                    <br/>
+                                    <p style="margin:0px;font-size:11px;font-family:Calibri;">
+                                        In the meantime, please see our brochure that is attached.<br/>
+                                        <!-- In the meantime, please see our <a style="background-color:transparent;text-decoration-thickness:initial;color:inherit;">brochure</a> and <a style="background-color:transparent;text-decoration-thickness:initial;color:inherit;">colour chart .</a><br/> -->
+                                    </p>
+                                </div>
+
+                                <div style="font-size:11px;font-family:Calibri;">
+                                    <br/>
+                                    <p style="margin:0px;font-size:11px;font-family:Calibri;">
+                                        You can also see our latest projects and product information on our <a style="background-color:transparent;text-decoration-thickness:initial;color:inherit;">website</a> and <a style="background-color:transparent;text-decoration-thickness:initial;color:inherit;">Facebook page </a> .<br/>
+                                        <!-- https://www.facebook.com/openingroofspecialists/ -->
+                                    </p>
+                                </div>
+
+                                <div style="font-size:11px;font-family:Calibri;">
+                                    <br/>
+                                    <p style="margin:0px;font-size:11px;font-family:Calibri;">
+                                        If you need any further information prior or need to change the appointment please call Jason direct on 0411 122 988<br/>
+                                    </p>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody></table>
+
+
+                    <br/>
+                    <!-- Kind Regards -->
+                    % if object.user_id.signature:
+                        <br />
+                        ${object.user_id.signature | safe}
+                    % endif
+
+                </div>
+
+            </field>
+            <field name="attachment_ids" eval="[(6, 0, [ref('crm_lead_mail_brochure_attchment')])]"/>
+            <field name="lang">${object.partner_id.lang}</field>
+            <field name="auto_delete" eval="False"/>
+        </record>
+
+        <!-- Meeting Confirmation - Matt -->
+        <record id="template_meeting_confirmation_matt" model="mail.template">
+            <field name="name">Meeting Confirmation – Matt</field>
+            <field name="model_id" ref="crm.model_crm_lead"/>
+            <field name="email_from">${(object.user_id.partner_id.email or user.login or '') | safe}</field>
+            <field name="email_to">${('' if object.partner_id.email and object.partner_id.email == object.email else object.email) | safe}</field>
+            <!-- <field name="partner_to">${object.partner_id.id if object.partner_id.email and object.partner_id.email == object.email else False}</field> -->
+            <!-- <field name="subject">Meeting Confirmation - ${object.first_name if object.first_name else object.partner_id.name}</field> -->
+            <field name="subject">Opening Roof Specialists</field>
+            <!-- <field name="lang">${object.partner_id.lang}</field> -->
+            <field name="body_html" type="html">
+
+                <div style="font-size:11px;font-family:Calibri;">
+                    <p style="margin:0px;font-size:11px;font-family:Calibri;">
+                        Hi ${object.first_name if object.first_name else object.partner_id.name},<br/><br/>
+                    </p>
+                    <table border="0" cellpadding="0" cellspacing="0" style="border-collapse:collapse;">
+                        <tbody><tr>
+                            <td>
+                                <div style="font-size:11px;font-family:Calibri;">
+                                    <p style="margin:0px;font-size:11px;font-family:Calibri;">
+                                        It was nice to speak with you about an opening roof solution to create the ultimate outdoor experience.<br/>
+                                    </p>
+                                </div>
+
+                                <div style="font-size:11px;font-family:Calibri;">
+                                    <br/>
+                                    <p style="margin:0px;font-size:11px;font-family:Calibri;">
+                                        I can confirm our Design Consultant, Matt Coates will be meeting with you at 11:00am on Tuesday 1st June.<br/>
+                                    </p>
+                                </div>
+
+                                <div style="font-size:11px;font-family:Calibri;">
+                                    <br/>
+                                    <p style="margin:0px;font-size:11px;font-family:Calibri;">
+                                        In the meantime, please see our brochure that is attached.
+                                        <br/>
+                                        <!-- In the meantime, please see our <a style="background-color:transparent;text-decoration-thickness:initial;color:inherit;">brochure</a> and <a style="background-color:transparent;text-decoration-thickness:initial;color:inherit;">colour chart .</a><br/> -->
+                                    </p>
+                                </div>
+
+                                <div style="font-size:11px;font-family:Calibri;">
+                                    <br/>
+                                    <p style="margin:0px;font-size:11px;font-family:Calibri;">
+                                        You can also see our latest projects and product information on our <a style="background-color:transparent;text-decoration-thickness:initial;color:inherit;">website</a> and <a style="background-color:transparent;text-decoration-thickness:initial;color:inherit;">Facebook page </a> .<br/>
+                                        <!-- https://www.facebook.com/openingroofspecialists/ -->
+                                    </p>
+                                </div>
+
+                                <div style="font-size:11px;font-family:Calibri;">
+                                    <br/>
+                                    <p style="margin:0px;font-size:11px;font-family:Calibri;">
+                                        If you need any further information prior or need to change the appointment please call Matt direct on 0499 202 035.<br/>
+                                    </p>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody></table>
+
+
+                    <br/>
+                    <!-- Kind Regards -->
+                    % if object.user_id.signature:
+                        <br />
+                        ${object.user_id.signature | safe}
+                    % endif
+
+                </div>
+
+            </field>
+            <field name="attachment_ids" eval="[(6, 0, [ref('crm_lead_mail_brochure_attchment')])]"/>
+            <field name="lang">${object.partner_id.lang}</field>
+            <field name="auto_delete" eval="False"/>
+        </record>
+
+        <!-- Uncontactable Lead -->
+        <record id="template_meeting_uncontactable_lead_new" model="mail.template">
+            <field name="name">Uncontactable Lead</field>
+            <field name="model_id" ref="crm.model_crm_lead"/>
+            <field name="email_from">${(object.user_id.partner_id.email or user.login or '') | safe}</field>
+            <field name="email_to">${('' if object.partner_id.email and object.partner_id.email == object.email else object.email) | safe}</field>
+            <!-- <field name="partner_to">${object.partner_id.id if object.partner_id.email and object.partner_id.email == object.email else False}</field> -->
+            <!-- <field name="subject">Uncontactable Lead - ${object.first_name if object.first_name else object.partner_id.name}</field> -->
+            <field name="subject">Opening Roof Specialists</field>
+            <!-- <field name="lang">${object.partner_id.lang}</field> -->
+            <field name="body_html" type="html">
+
+                <div style="font-size:11px;font-family:Calibri;">
+                    <p style="margin:0px;font-size:11px;font-family:Calibri;">
+                        Hi ${object.first_name if object.first_name else object.partner_id.name},<br/><br/>
+                    </p>
+                    <table border="0" cellpadding="0" cellspacing="0" style="border-collapse:collapse;">
+                        <tbody><tr>
+                            <td>
+                                <div style="font-size:11px;font-family:Calibri;">
+                                    <p style="margin:0px;font-size:11px;font-family:Calibri;">
+                                        You recently contacted us for an opening roof solution to create the ultimate outdoor experience.<br/>
+                                    </p>
+                                </div>
+
+                                <div style="font-size:11px;font-family:Calibri;">
+                                    <br/>
+                                    <p style="margin:0px;font-size:11px;font-family:Calibri;">
+                                        I have been unable to reach you. Our brochure is attached for you.<br/>
+                                        <!-- In the meantime, please see our <a style="background-color:transparent;text-decoration-thickness:initial;color:inherit;">brochure</a> and <a style="background-color:transparent;text-decoration-thickness:initial;color:inherit;">colour chart .</a><br/> -->
+                                    </p>
+                                </div>
+
+                                <div style="font-size:11px;font-family:Calibri;">
+                                    <br/>
+                                    <p style="margin:0px;font-size:11px;font-family:Calibri;">
+                                        If we can be of any further assistance to you or you would like one of our experienced Design Consultants to visit you, please contact us on 8708 1500.<br/>
+                                    </p>
+                                </div>
+
+                            </td>
+                        </tr>
+                    </tbody></table>
+
+
+                    <br/>
+                    <!-- Kind Regards -->
+                    % if object.user_id.signature:
+                        <br />
+                        ${object.user_id.signature | safe}
+                    % endif
+
+                </div>
+
+            </field>
+            <field name="attachment_ids" eval="[(6, 0, [ref('crm_lead_mail_brochure_attchment')])]"/>
+            <field name="lang">${object.partner_id.lang}</field>
+            <field name="auto_delete" eval="False"/>
+        </record>
+
+        <!-- First Contact email -->
+        <record id="template_meeting_first_contact_new" model="mail.template">
+            <field name="name">First Contact email</field>
+            <field name="model_id" ref="crm.model_crm_lead"/>
+            <field name="email_from">${(object.user_id.partner_id.email or user.login or '') | safe}</field>
+            <field name="email_to">${('' if object.partner_id.email and object.partner_id.email == object.email else object.email) | safe}</field>
+            <!-- <field name="partner_to">${object.partner_id.id if object.partner_id.email and object.partner_id.email == object.email else False}</field> -->
+            <!-- <field name="subject">First Contact email - ${object.first_name if object.first_name else object.partner_id.name}</field> -->
+            <field name="subject">Opening Roof Specialists</field>
+            <!-- <field name="lang">${object.partner_id.lang}</field> -->
+            <field name="body_html" type="html">
+
+                <div style="font-size:11px;font-family:Calibri;">
+                    <p style="margin:0px;font-size:11px;font-family:Calibri;">
+                        Hi ${object.first_name if object.first_name else object.partner_id.name},<br/><br/>
+                    </p>
+                    <table border="0" cellpadding="0" cellspacing="0" style="border-collapse:collapse;">
+                        <tbody><tr>
+                            <td>
+                                <div style="font-size:11px;font-family:Calibri;">
+                                    <p style="margin:0px;font-size:11px;font-family:Calibri;">
+                                        It was nice to speak with you about an opening roof solution to create the ultimate outdoor experience.<br/>
+                                    </p>
+                                </div>
+
+                                <div style="font-size:11px;font-family:Calibri;">
+                                    <br/>
+                                    <p style="margin:0px;font-size:11px;font-family:Calibri;">
+                                        Our brochure is attached for you.<br/>
+                                        <!-- Here is a link to <a style="background-color:transparent;text-decoration-thickness:initial;color:inherit;">our brochure</a> for you.<br/> -->
+                                    </p>
+                                </div>
+
+                                <div style="font-size:11px;font-family:Calibri;">
+                                    <br/>
+                                    <p style="margin:0px;font-size:11px;font-family:Calibri;">
+                                        Opening Roof Specialists has created spectacular outdoor entertaining areas for over 32 years. Modern building materials and advanced automation techniques makes the system customisable to your lifestyle.<br/>
+                                    </p>
+                                </div>
+
+                                <div style="font-size:11px;font-family:Calibri;">
+                                    <br/>
+                                    <p style="margin:0px;font-size:11px;font-family:Calibri;">
+                                        You can also see our latest projects and product information on our <a style="background-color:transparent;text-decoration-thickness:initial;color:inherit;">website</a> and <a style="background-color:transparent;text-decoration-thickness:initial;color:inherit;">Facebook page </a> .<br/>
+                                        <!-- https://www.facebook.com/openingroofspecialists/ -->
+                                    </p>
+                                </div>
+
+                                <div style="font-size:11px;font-family:Calibri;">
+                                    <br/>
+                                    <p style="margin:0px;font-size:11px;font-family:Calibri;">
+                                        If we can be of any further assistance to you or you would like one of our experienced Design Consultants to visit you, please contact us on 8708 1500.<br/>
+                                    </p>
+                                </div>
+
+                            </td>
+                        </tr>
+                    </tbody></table>
+
+                    <br/>
+                    <!-- Kind Regards -->
+                    % if object.user_id.signature:
+                        <br />
+                        ${object.user_id.signature | safe}
+                    % endif
+
+                </div>
+
+            </field>
+            <field name="attachment_ids" eval="[(6, 0, [ref('crm_lead_mail_brochure_attchment')])]"/>
+            <field name="lang">${object.partner_id.lang}</field>
+            <field name="auto_delete" eval="False"/>
+        </record>
+
+        <!-- Jason – Quote -->
+        <record id="template_meeting_jason_quote_new" model="mail.template">
+            <field name="name">Jason – Quote</field>
+            <field name="model_id" ref="crm.model_crm_lead"/>
+            <field name="email_from">${(object.user_id.partner_id.email or user.login or '') | safe}</field>
+            <field name="email_to">${('' if object.partner_id.email and object.partner_id.email == object.email else object.email) | safe}</field>
+            <!-- <field name="partner_to">${object.partner_id.id if object.partner_id.email and object.partner_id.email == object.email else False}</field> -->
+            <!-- <field name="subject">Quote - ${object.first_name if object.first_name else object.partner_id.name}</field> -->
+            <field name="subject">Opening Roof Specialists</field>
+            <!-- <field name="lang">${object.partner_id.lang}</field> -->
+            <field name="body_html" type="html">
+
+                <div style="font-size:11px;font-family:Calibri;">
+                    <p style="margin:0px;font-size:11px;font-family:Calibri;">
+                        Hi ${object.first_name if object.first_name else object.partner_id.name},<br/><br/>
+                    </p>
+                    <table border="0" cellpadding="0" cellspacing="0" style="border-collapse:collapse;">
+                        <tbody><tr>
+                            <td>
+                                <div style="font-size:11px;font-family:Calibri;">
+                                    <p style="margin:0px;font-size:11px;font-family:Calibri;">
+                                        Thank you for the opportunity to quote your project at<br/>
+                                    </p>
+                                </div>
+
+                                <div style="font-size:11px;font-family:Calibri;">
+                                    <br/>
+                                    <p style="margin:0px;font-size:11px;font-family:Calibri;">
+                                        Please find attached your quote and drawing for your Eclipse Opening Roof.<br/>
+                                    </p>
+                                </div>
+
+                                <div style="font-size:11px;font-family:Calibri;">
+                                    <br/>
+                                    <p style="margin:0px;font-size:11px;font-family:Calibri;">
+                                        Should this Quote be within your budget, I am happy to provide you with a Drawing of the roof to help you with your decision.<br/>
+                                    </p>
+                                </div>
+
+                                <div style="font-size:11px;font-family:Calibri;">
+                                    <br/>
+                                    <p style="margin:0px;font-size:11px;font-family:Calibri;">
+                                        If you have any questions please do not hesitate to contact me.<br/>
+                                    </p>
+                                </div>
+
+                            </td>
+                        </tr>
+                    </tbody></table>
+
+                    <br/>
+                    <!-- Kind Regards -->
+                    % if object.user_id.signature:
+                        <br />
+                        ${object.user_id.signature | safe}
+                    % endif
+
+                </div>
+
+            </field>
+            <field name="attachment_ids" eval="[(6, 0, [ref('crm_lead_mail_brochure_attchment')])]"/>
+            <field name="lang">${object.partner_id.lang}</field>
+            <field name="auto_delete" eval="False"/>
+        </record>
+
+        <!-- Jason – Agreement -->
+        <record id="template_meeting_jason_agreement_new" model="mail.template">
+            <field name="name">Jason – Agreement</field>
+            <field name="model_id" ref="crm.model_crm_lead"/>
+            <field name="email_from">${(object.user_id.partner_id.email or user.login or '') | safe}</field>
+            <field name="email_to">${('' if object.partner_id.email and object.partner_id.email == object.email else object.email) | safe}</field>
+            <!-- <field name="partner_to">${object.partner_id.id if object.partner_id.email and object.partner_id.email == object.email else False}</field> -->
+            <!-- <field name="subject">Agreement - ${object.first_name if object.first_name else object.partner_id.name}</field> -->
+            <field name="subject">Opening Roof Specialists</field>
+            <!-- <field name="lang">${object.partner_id.lang}</field> -->
+            <field name="body_html" type="html">
+
+                <div style="font-size:11px;font-family:Calibri;">
+                    <p style="margin:0px;font-size:11px;font-family:Calibri;">
+                        Dear ${object.first_name if object.first_name else object.partner_id.name},<br/><br/>
+                    </p>
+                    <table border="0" cellpadding="0" cellspacing="0" style="border-collapse:collapse;">
+                        <tbody><tr>
+                            <td>
+                                <div style="font-size:11px;font-family:Calibri;">
+                                    <p style="margin:0px;font-size:11px;font-family:Calibri;">
+                                        Please find attached the Agreement for your Eclipse Opening Roof.<br/>
+                                    </p>
+                                </div>
+
+                                <div style="font-size:11px;font-family:Calibri;">
+                                    <br/>
+                                    <p style="margin:0px;font-size:11px;font-family:Calibri;">
+                                        Could you please <b>sign Page 2</b> and <b>initial the bottom right on all pages</b> as well as <b>initial the drawing.</b><br/>
+                                    </p>
+                                </div>
+
+                                <div style="font-size:11px;font-family:Calibri;">
+                                    <br/>
+                                    <p style="margin:0px;font-size:11px;font-family:Calibri;">
+                                        Then please return your signed Agreement along with your deposit so we can begin the manufacturing of your Opening Roof.<br/>
+                                    </p>
+                                </div>
+
+                                <div style="font-size:11px;font-family:Calibri;">
+                                    <br/>
+                                    <p style="margin:0px;font-size:11px;font-family:Calibri;">
+                                        If you have any questions please do not hesitate to contact me.<br/>
+                                    </p>
+                                </div>
+
+                            </td>
+                        </tr>
+                    </tbody></table>
+
+                    <br/>
+                    <!-- Kind Regards -->
+                    % if object.user_id.signature:
+                        <br />
+                        ${object.user_id.signature | safe}
+                    % endif
+
+                </div>
+
+            </field>
+            <field name="attachment_ids" eval="[(6, 0, [ref('crm_lead_mail_brochure_attchment')])]"/>
+            <field name="lang">${object.partner_id.lang}</field>
+            <field name="auto_delete" eval="False"/>
+        </record>
+
+        <!-- Home Show Invite -->
+        <record id="template_meeting_home_show_invite_new" model="mail.template">
+            <field name="name">Home Show Invite</field>
+            <field name="model_id" ref="crm.model_crm_lead"/>
+            <field name="email_from">${(object.user_id.partner_id.email or user.login or '') | safe}</field>
+            <field name="email_to">${('' if object.partner_id.email and object.partner_id.email == object.email else object.email) | safe}</field>
+            <!-- <field name="partner_to">${object.partner_id.id if object.partner_id.email and object.partner_id.email == object.email else False}</field> -->
+            <field name="subject">Home Show Invite - ${object.first_name if object.first_name else object.partner_id.name}</field>
+            <!-- <field name="lang">${object.partner_id.lang}</field> -->
+            <field name="body_html" type="html">
+
+                <div style="font-size:11px;font-family:Calibri;">
+                    <p style="margin:0px;font-size:11px;font-family:Calibri;">
+                        Dear ${object.first_name if object.first_name else object.partner_id.name},<br/><br/>
+                    </p>
+                    <table border="0" cellpadding="0" cellspacing="0" style="border-collapse:collapse;">
+                        <tbody><tr>
+                            <td>
+                                <div style="font-size:11px;font-family:Calibri;">
+                                    <p style="margin:0px;font-size:11px;font-family:Calibri;">
+                                        Opening Roof Specialists will again have a stand at The Sydney Home Show on 21 - 23 May 2021, and we invite you to come and visit us. Tickets are FREE !!<br/>
+                                    </p>
+                                </div>
+
+                                <div style="font-size:11px;font-family:Calibri;">
+                                    <br/>
+                                    <p style="margin:0px;font-size:11px;font-family:Calibri;">
+                                        The Sydney Home Show will be held at the International Convention Centre Darling Harbour Sydney.  You can find us at  Stand G22   where we will have a working Eclipse Opening Roof on display for you to see.<br/>
+                                    </p>
+                                </div>
+
+                                <div style="font-size:11px;font-family:Calibri;">
+                                    <br/>
+                                    <p style="margin:0px;font-size:11px;font-family:Calibri;">
+                                        We are the original suppliers of the aluminium opening roof system in Sydney and have proudly been transforming outdoor entertaining areas for close to 30 years.  Our focus on perfecting our design and installation is what sets us apart as we take the time to understand the needs of our customers.  So you can enjoy our outdoor area all year round, in any weather.<br/>
+                                    </p>
+                                </div>
+
+                                <div style="font-size:11px;font-family:Calibri;">
+                                    <br/>
+                                    <p style="margin:0px;font-size:11px;font-family:Calibri;">
+                                        I have attached our brochure for your reference.<br/>
+                                        <!-- I have inserted a link to our brochure for your reference <a href="I have inserted a link to our brochure for your reference    http://openingroof.my.salesforce.com/sfc/p/7F000006QBeU/a/7F000000cJoR/jAs8JAb0_yUJGPZI_6sOyWyZCHh92bAyrZzy9LRpfJA">http://openingroof.my.salesforce.com/sfc/p/7F000006QBeU/a/7F000000cJoR/jAs8JAb0_yUJGPZI_6sOyWyZCHh92bAyrZzy9LRpfJA</a><br/> -->
+                                    </p>
+                                </div>
+
+                                <div style="font-size:11px;font-family:Calibri;">
+                                    <br/>
+                                    <p style="margin:0px;font-size:11px;font-family:Calibri;">
+                                        If we can be of any further assistance to you please contact us on 8708 1500.<br/>
+                                    </p>
+                                </div>
+
+                            </td>
+                        </tr>
+                    </tbody></table>
+
+                    <br/>
+                    <!-- Kind Regards -->
+                    % if object.user_id.signature:
+                        <br />
+                        ${object.user_id.signature | safe}
+                    % endif
+
+                </div>
+
+            </field>
+            <field name="attachment_ids" eval="[(6, 0, [ref('crm_lead_mail_brochure_attchment')])]"/>
+            <field name="lang">${object.partner_id.lang}</field>
+            <field name="auto_delete" eval="False"/>
+        </record>
+
+    </data>
+</odoo>
+
+    <!-- % if object.user_id.name:
+        <br/>
+        ${object.user_id.name | safe}
+        <br/>
+        <b style="font-weight:bolder;">${object.user_id.company_id.name | safe}</b>
+        <br/>
+        <b style="font-weight:bolder;"> E </b> ${object.user_id.company_id.email | safe}
+        <br/>
+        <b style="font-weight:bolder;"> P </b> ${object.user_id.company_id.phone | safe}
+        <br/>
+        <a href="https://www.openingroofspecialists.com.au" style="background-color:transparent;text-decoration-thickness:initial;color:rgb(0, 135, 132);">
+            ${object.user_id.company_id.website | safe}
+        </a>
+    % endif -->

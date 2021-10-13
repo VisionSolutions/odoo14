@@ -1,0 +1,51 @@
+<odoo>
+<data>
+
+    <record id="tree_view_res_users_staff" model="ir.ui.view">
+        <field name="name">Staff</field>
+        <field name="model">res.users.staff</field>
+        <field name="priority" eval="2"/>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="is_installed_by"/>
+                <field name="is_trade_assistant"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="form_view_res_users_staff" model="ir.ui.view">
+        <field name="name">Staff</field>
+        <field name="model">res.users.staff</field>
+        <field name="priority" eval="2"/>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                    </group>
+                    <group>
+                        <field name="is_installed_by"/>
+                        <field name="is_trade_assistant"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_res_users_staff" model="ir.actions.act_window">
+        <field name="name">Staff</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">res.users.staff</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_id" ref="tree_view_res_users_staff"/>
+    </record>
+
+    <menuitem id="menu_res_users_staff1" action="action_res_users_staff" name="Staff" parent="crm.crm_menu_config"/>
+
+    <!-- crm.crm_menu_root -->
+    <!-- crm.crm_menu_config -->
+    
+
+</data>
+</odoo>

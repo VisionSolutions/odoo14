@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo><data noupdate="1">
+
+    <!-- opportunities' lost causes -->
+    <record id="crm.lost_reason_1" model="crm.lost.reason">
+        <field name="name">Lost to competitor</field>
+    </record>
+    <record id="crm.lost_reason_2" model="crm.lost.reason">
+        <field name="name">No Budget/Lost Funding</field>
+    </record>
+    <record id="crm.lost_reason_3" model="crm.lost.reason">
+        <field name="name">No Decision/Non Responsive</field>
+    </record>
+    <record id="lost_reason_4" model="crm.lost.reason">
+        <field name="name">Price</field>
+    </record>
+    <record id="lost_reason_5" model="crm.lost.reason">
+        <field name="name">Product not suitable</field>
+    </record>
+    <record id="lost_reason_6" model="crm.lost.reason">
+        <field name="name">Site not suitable</field>
+    </record>
+    <record id="lost_reason_7" model="crm.lost.reason">
+        <field name="name">Lost Tender</field>
+    </record>
+
+</data></odoo>

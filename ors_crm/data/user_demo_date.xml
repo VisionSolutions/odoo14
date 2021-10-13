@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+
+    <record model="res.partner" id="partner_sharon">
+        <field name="name">Sharon De Silva</field>
+        <field name="phone">+1 525-252-552</field>
+        <field name="email">sales@openingroofspecialists.com.au</field>
+    </record>
+
+    <record id="user_sharon" model="res.users">
+        <field name="login">sales@openingroofspecialists.com.au</field>
+        <field name="partner_id" ref="ors_crm.partner_sharon"/>
+    </record>
+
+</odoo>
+
