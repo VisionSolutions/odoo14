@@ -52,10 +52,18 @@ class OrsCrmLead(models.Model):
         country = self.env['res.country'].search([('code', '=', 'AU')], limit=1)
         return country
 
+    @api.model
+    def _get_default_ids(self):
+        rec = self.env['crm.tag'].search([('name', '=', 'newsletter')], limit=1).ids
+        return rec
+
     country_id = fields.Many2one(
         'res.country', string='Country',
         compute='_compute_partner_address_values', readonly=False, store=True, default=_get_default_country)
 
+    tag_ids = fields.Many2many(
+        'crm.tag', 'crm_tag_rel', 'lead_id', 'tag_id', string='Tags',
+        help="Classify and analyze your lead/opportunity categories like: Training, Service",default=_get_default_ids)
     # Lead fields
     # lead_stage_id = fields.Many2one(
     #     'crm.stage', string='Lead Stage', index=True, tracking=True,
