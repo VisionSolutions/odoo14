@@ -427,19 +427,19 @@ class OrsCrmLead(models.Model):
             'url': self.get_map_url(),
         }
 
-    def _message_get_suggested_recipients(self):
-        recipients = super(OrsCrmLead, self)._message_get_suggested_recipients()
+     def _message_get_suggested_recipients(self):
+        result = dict((res_id, []) for res_id in self.ids)
         try:
             for lead in self:
                 if lead.partner_id:
-                    lead._message_add_suggested_recipient(recipients, partner=lead.partner_id, reason=_('Customer'))
+                    lead._message_add_suggested_recipient(result, partner=lead.partner_id, reason=_('Customer'))
                 elif lead.email_from:
-                    name = '%s %s' % (lead.first_name, lead.last_name)
-                    new_email = '%s <%s>' % (name, lead.email_from)
-                    lead._message_add_suggested_recipient(recipients, email=new_email, reason=_('Customer Email'))
+                    name = '%s %s'%(lead.first_name,lead.last_name)
+                    new_email = '%s <%s>'%(name,lead.email_from)
+                    lead._message_add_suggested_recipient(result, email=new_email, reason=_('Customer Email'))
         except AccessError:  # no read access rights -> just ignore suggested recipients because this imply modifying followers
             pass
-        return recipients
+        return result
 
     # For open List view of calendar and own meeting from lead/opportunity
     # def action_schedule_meeting(self):
