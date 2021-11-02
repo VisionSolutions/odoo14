@@ -20,7 +20,7 @@
         'data/ors_crm_lost_reason_data.xml',
         'data/user_demo_date.xml',
         'data/mail_data.xml',
-        'data/mail_data_final.xml',
+        # 'data/mail_data_final.xml',
         'views/ors_res_users_staff.xml',
         'views/ors_crm_views.xml',
         'views/ors_opportunity_view.xml',
